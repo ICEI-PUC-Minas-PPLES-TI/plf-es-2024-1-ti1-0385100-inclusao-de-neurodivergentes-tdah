@@ -1,4 +1,4 @@
-![image](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385100-inclusao-de-neurodivergentes-tdah/assets/164196737/a05f207b-7d01-4cfe-941e-ed96409be92a)# Documentação do Projeto (TIDocs)
+# Documentação do Projeto (TIDocs)
 
 Esta pasta armazena a documentação do projeto para a disciplina de **Trabalho Interdisciplinar 1** dos cursos de Tecnologia da Informação da **[PUC Minas](https://pucminas.br)**. Essa documentação é estruturada na forma de um site que fica disponível por meio do GitHub Pages e pode ser incluído, também, no site da solução hospedada. Um [exemplo publicado do TIDocs](https://webtech-puc-minas.github.io/ti1-template/) está disponível por meio do repositório do **[WebTech PUC Minas](https://github.com/webtech-pucminas)**.
 
@@ -37,14 +37,7 @@ O público alvo do nosso projeto são jovens neurodivergentes de 17 à 30 anos, 
 
 ## Personas
 
-Relacione as personas identificadas no seu projeto e os respectivos mapas de empatia. Lembre-se que você deve ser enumerar e descrever precisamente e de forma personalizada todos os principais envolvidos com a solução almeja.
-
-**Links Úteis**:
-
-- [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-- [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-- [Rock Content](https://rockcontent.com/blog/personas/)
-- [Criar personas (Hotmart)](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
+Arthur Pazzutti é um morado de Belo Horizonte com 18 anos que possui muita dificuldade em focar nos estudos devido ao seu TDAH (Transtorno do déficit de atenção com hiperatividade). Atualmente está cursando o 1° período de engenharia de software na Puc Minas.  Devido ao seu TDAH, Arthur não consegue se concentrar ao máximo e desenvolver seus estudos, além disso, tem uma rotina desorganizada, o que faz com que seu foco se distribua em outras atividades.
 
 ## Histórias de Usuários
 
