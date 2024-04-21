@@ -1,4 +1,4 @@
-# Documentação do Projeto (TIDocs)
+![image](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385100-inclusao-de-neurodivergentes-tdah/assets/164196737/a05f207b-7d01-4cfe-941e-ed96409be92a)# Documentação do Projeto (TIDocs)
 
 Esta pasta armazena a documentação do projeto para a disciplina de **Trabalho Interdisciplinar 1** dos cursos de Tecnologia da Informação da **[PUC Minas](https://pucminas.br)**. Essa documentação é estruturada na forma de um site que fica disponível por meio do GitHub Pages e pode ser incluído, também, no site da solução hospedada. Um [exemplo publicado do TIDocs](https://webtech-puc-minas.github.io/ti1-template/) está disponível por meio do repositório do **[WebTech PUC Minas](https://github.com/webtech-pucminas)**.
 
@@ -20,44 +20,20 @@ Esta seção traz explicações breves sobre o conjunto de artefatos que precisa
 
 ## Problema
 
-Nesse momento você deve apresentar o problema que a sua aplicação deve resolver. No entanto, não é a hora de comentar sobre a aplicação. Descreva também o contexto em que essa aplicação será usada, se houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
-
-Nesse momento, o grupo pode optar por fazer uso de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-**Links Úteis**:
-
-- [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-- [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-- [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+Na nossa população atual, é comum saber de alguem que não consegue se concentrar em tarefas e estudos, ainda mais pessoas neurodivergentes, tendo isso em vista, se faz necessário ferramentas que possam destravar e ajudar essas pessoas, para que possam ter um maior controle de suas atividades e um maior desempenho, tanto na vida como acadêmico.
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
-
-**Links Úteis**:
-
-- [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Objetivo geral:
+-Desenvolver um software para auxiliar essa pessoas, principalmente estudantes, para que possam se organizar e poder tem um maior desenvolvimento.
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
-
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
-
-**Links Úteis**:
-
-- [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+Priorizamos a inclusão de pessoas com neurodivergência em nossa plataforma educacional, adaptando-a para atender às suas necessidades específicas. Desenvolvemos funcionalidades internas que simplificam a organização e maximizam o foco no estudo. Nossa meta é criar um ambiente de aprendizado acolhedor e eficaz, capacitando esses usuários a alcançarem um maior desempenho, tanto no cotidiano como na vida acad.
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações hierárquicas, etc.
-
-Adicione informações sobre o público-alvo por meio de uma descrição textual, ou diagramas de personas, mapa de stakeholders, ou como o grupo achar mais conveniente.
-
-**Links Úteis**:
-
-- [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-- [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+O público alvo do nosso projeto são jovens neurodivergentes de 17 à 30 anos, que estejam principalmente com dificuldades de ser organizar e concentrar nos estudos. Nosso principal objetivo é ajudar essas pessoas para que possam ter um maior foco.
 
 ## Personas
 
@@ -72,60 +48,78 @@ Relacione as personas identificadas no seu projeto e os respectivos mapas de emp
 
 ## Histórias de Usuários
 
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
+● Como uma pesquisadora em Ciências Sociais, eu quero acessar artigos
+acadêmicos sobre teorias sociológicas para que seja possível aprofundar
+meu conhecimento e embasar minha pesquisa. 
 
-**Links Úteis**:
+● Como um professor de Literatura, eu quero procurar livros filtrando por
+autor para que seja possível encontrar obras específicas de grandes
+escritores para recomendar aos meus alunos.
 
-- [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-- [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
+● Como uma estudante de Administração, eu quero acessar videoaulas
+sobre gestão financeira para que seja possível revisar conceitos
+importantes e me preparar melhor para as provas da faculdade.
+
+● Como um consultor de Marketing Digital, eu quero utilizar uma agenda
+integrada ao software para que seja possível agendar reuniões com clientes
+e organizar meu dia de trabalho de forma eficiente.
+
+● Como uma estudante de Psicologia, eu quero acessar resumos com mapa
+mental sobre teorias psicológicas para que seja possível visualizar e
+entender melhor os conceitos complexos estudados em sala de aula.
+
+● Como um advogado, eu quero acessar resumos escritos sobre
+jurisprudência recente para que seja possível me manter atualizado sobre
+as decisões judiciais relevantes para minha prática profissional.
 
 ## Requisitos
 
 Os requisitos de um projeto são classificados em dois grupos:
+Requisitos Funcionais:
+RF-01: Cadastro de usuários/ Login
+RF-02: Seleção da aba "Estudos"
+RF-03: Seleção da aba "Agenda"
+RF-04: Seleção da aba "Resumos"
+RF-05: Ícone de perfil
+RF-06: Área onde possa criar seus resumos
+RF-07: Área onde possa definir suas tarefas diárias
+RF-08: Área onde possa ver sua aulas 
+RF-09: Área onde possa procurar e ler livros 
+RF-10: Cronômetro para estudo
 
-- [Requisitos Funcionais (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
-  correspondem a uma funcionalidade que deve estar presente na plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade, desempenho, confiabilidade, segurança ou outro (ex: suporte a dispositivos iOS e Android).
+Requisitos não Funcionais: 
+RNF-01: Segurança no login
+RNF-02: Design responsivo
+RNF-03: Atualização rápida das suas tarefas
+RNF-04: Guardar sua aulas e resumos 
 
-Lembre-se que cada requisito deve corresponder à uma e somente uma característica alvo da sua solução. Além disso, certifique-se de que todos os aspectos capturados nas Histórias de Usuário foram cobertos.
-
-**Links Úteis**:
-
-- [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-- [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
 
 ## User Flow
+https://www.figma.com/file/HXRdwwbzjpwFHkmwp6YGzB/Untitled?type=design&mode=design&t=GK4dtlopqc7AtXNJ-0
 
-Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapear todo fluxo de telas do site ou app. Essa técnica funciona para alinhar os caminhos e as possíveis ações que o usuário pode fazer junto com os membros de sua equipe.
-
-**Links Úteis**:
-
-- [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-- [User Flow vs Site Maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
-- [Top 25 User Flow Tools &amp; Templates for Smooth](https://www.mockplus.com/blog/post/user-flow-tools)
 
 ## Wireframes
 
-Wireframes são protótipos das telas da aplicação usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante ao layout de elementos fundamentais na interface.
+https://www.figma.com/file/WKv8vkb0TP9fHMQFtJ6HkC/Untitled?type=design&mode=design&t=GK4dtlopqc7AtXNJ-0
 
-**Links Úteis**:
-
-- [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-- [Figma](https://www.figma.com/)
-- [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-- [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
 
 ## Gestão de Projetos
 
- Nesta parte do documento, você deve apresentar  o processo de trabalho baseado nas metodologias ágeis, a divisão de papéis e tarefas, as ferramentas empregadas e como foi realizada a gestão de configuração do projeto via GitHub.
+A divisão de tarefas foi usada para uma conclusão mais rapida do nosso trabalho. A gestão de projetos foi destinada ao Arlindo Junior (Scrum Master), ao Arthur Pazzutti, Vincius sena e Gabriel lima, foram destinado o processo de Design Think. User flow e Wireframes foi feita a partir de uma participação geral do grupo, tendo discussões e reuniões até chegar na conclusão, o Arlindo Junior ficou com o dever de passar as informações para o figma. Posterioremente, os slides foram feitos pelo Joaquim Vilela e a documentação redigida pelo Arlindo Junior. Todos os arquivos foram enviados no tempo certo para a conclusão do projeto, sendo necessária reuniões tanto online quanto presencial para acelerar, sendo usado o Framework Scrum para gerenciamento do projeto.
 
-Coloque detalhes sobre o processo de Design Thinking e a implementação do Framework Scrum seguido pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
+https://trello.com/b/XEorAP8a/gest%C3%A3o-de-projetos
 
-**Links Úteis**:
+## Metodologia 
+|Ambiente|   |Plataforma|   |Links|
+|Wireframe|   |Figma|   |(https://www.figma.com/)|
+|User flow|   |Figma|   |(https://www.figma.com/)|
+|Design Think|   |Miro|   |(https://miro.com/)|
+|Documentação|   |Github e google docs|   |https://github.com/|
 
-- [Sobre Projects - GitHub Docs](https://docs.github.com/pt/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
-- [Gestão de projetos com GitHub | balta.io](https://balta.io/blog/gestao-de-projetos-com-github)
-- [(460) GitHub Projects - YouTube](https://www.youtube.com/playlist?list=PLiO7XHcmTsldZR93nkTFmmWbCEVF_8F5H)
-- [11 Passos Essenciais para Implantar Scrum no seu Projeto](https://mindmaster.com.br/scrum-11-passos/)
-- [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
+## Referência Bibliográficas
+
+Material de apoio postado pelos professores 
+
+
+
+
