@@ -20,7 +20,7 @@ Esta seção traz explicações breves sobre o conjunto de artefatos que precisa
 
 ## Problema
 
-Na nossa população atual, é comum saber de alguem que não consegue se concentrar em tarefas e estudos, ainda mais pessoas neurodivergentes, tendo isso em vista, se faz necessário ferramentas que possam destravar e ajudar essas pessoas, para que possam ter um maior controle de suas atividades e um maior desempenho, tanto na vida como acadêmico.
+Hodiernamente, é comum saber de alguem que não consegue se concentrar em tarefas e estudos, ainda mais pessoas neurodivergentes, tendo isso em vista, se faz necessário ferramentas que possam destravar e ajudar essas pessoas, para que possam ter um maior controle de suas atividades e um maior desempenho, tanto na vida como acadêmico.
 
 ## Objetivos
 
