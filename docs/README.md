@@ -25,7 +25,7 @@ Na nossa população atual, é comum saber de alguem que não consegue se concen
 ## Objetivos
 
 Objetivo geral:
--Desenvolver um software para auxiliar essa pessoas, principalmente estudantes, para que possam se organizar e poder tem um maior desenvolvimento.
+-Desenvolver um software para auxiliar essas pessoas, principalmente estudantes, para que possam se organizar e alcançar um maior desenvolvimento.
 
 ## Justificativa
 
@@ -37,7 +37,7 @@ O público alvo do nosso projeto são jovens neurodivergentes de 17 à 30 anos, 
 
 ## Personas
 
-Arthur Pazzutti é um morado de Belo Horizonte com 18 anos que possui muita dificuldade em focar nos estudos devido ao seu TDAH (Transtorno do déficit de atenção com hiperatividade). Atualmente está cursando o 1° período de engenharia de software na Puc Minas.  Devido ao seu TDAH, Arthur não consegue se concentrar ao máximo e desenvolver seus estudos, além disso, tem uma rotina desorganizada, o que faz com que seu foco se distribua em outras atividades.
+Arthur Pazzutti é um morador de Belo Horizonte com 18 anos, que possui muita dificuldade em focar nos estudos devido ao seu TDAH (Transtorno do déficit de atenção com hiperatividade). Atualmente está cursando o 1° período de engenharia de software na Puc Minas.  Devido ao TDAH, Arthur não consegue se concentrar ao máximo e desenvolver seus estudos, além disso, tem uma rotina desorganizada, o que faz com que seu foco se distribua em outras atividades.
 
 ## Histórias de Usuários
 
@@ -98,7 +98,7 @@ https://www.figma.com/file/WKv8vkb0TP9fHMQFtJ6HkC/Untitled?type=design&mode=desi
 
 ## Gestão de Projetos
 
-A divisão de tarefas foi usada para uma conclusão mais rapida do nosso trabalho. A gestão de projetos foi destinada ao Arlindo Junior (Scrum Master), ao Arthur Pazzutti, Vincius sena e Gabriel lima, foram destinado o processo de Design Think. User flow e Wireframes foi feita a partir de uma participação geral do grupo, tendo discussões e reuniões até chegar na conclusão, o Arlindo Junior ficou com o dever de passar as informações para o figma. Posterioremente, os slides foram feitos pelo Joaquim Vilela e a documentação redigida pelo Arlindo Junior. Todos os arquivos foram enviados no tempo certo para a conclusão do projeto, sendo necessária reuniões tanto online quanto presencial para acelerar, sendo usado o Framework Scrum para gerenciamento do projeto.
+A divisão de tarefas foi usada para uma conclusão mais rapida do nosso trabalho. A gestão de projetos foi destinada ao Arlindo Junior (Scrum Master), ao Arthur Pazzutti, Vincius Sena e Gabriel Lima, foram destinado o processo de Design Think. User flow e Wireframes foram feitos a partir de uma participação geral do grupo, incluindo discussões e reuniões até chegarem em um consenso geral. O Arlindo Junior ficou com o dever de passar as informações para o figma. Posterioremente, os slides foram feitos pelo Joaquim Vilela e a documentação redigida pelo Arlindo Junior. Todos os arquivos foram enviados no tempo certo para a conclusão do projeto, sendo necessárias reuniões tanto online quanto presenciais para acelerar o desenvolvimento, sendo usado o Framework Scrum para gerenciamento do projeto.
 
 https://trello.com/b/XEorAP8a/gest%C3%A3o-de-projetos
 
