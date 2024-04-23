@@ -12,11 +12,6 @@ A documentação do projeto inclui as seguintes seções:
 6. FAQ (Questões frequentes)
 7. Referências Bibliográficas
 
-O template para o site é estruturado e permite que a equipe evolua a documentação do projeto à medida que avance no desenvolvimento.
-
-# Orientações gerais
-
-Esta seção traz explicações breves sobre o conjunto de artefatos que precisam ser incluídos na documentação do projeto com uma conjunto de links importantes para que se entenda como criar cada coisa. 
 
 ## Problema
 
