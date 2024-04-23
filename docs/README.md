@@ -24,17 +24,19 @@ Objetivo geral:
 
 ## Justificativa
 
-Priorizamos a inclusão de pessoas com neurodivergência em nossa plataforma educacional, adaptando-a para atender às suas necessidades específicas. Desenvolvemos funcionalidades internas que simplificam a organização e maximizam o foco no estudo. Nossa meta é criar um ambiente de aprendizado acolhedor e eficaz, capacitando esses usuários a alcançarem um maior desempenho, tanto no cotidiano como na vida acad.
+Priorizamos a inclusão de pessoas com neurodivergências em nossa plataforma educacional, adaptando-a para atender às suas necessidades específicas. Desenvolvemos funcionalidades internas que simplificam a organização e maximizam o foco no estudo. Nossa meta é criar um ambiente de aprendizado acolhedor e eficaz, capacitando esses usuários a alcançarem um maior desempenho, tanto no cotidiano como na vida acad.
 
 ## Público-Alvo
 
-O público alvo do nosso projeto são indivíduos neurodivergentes de 17 à 30 anos, que apresentam, principalmente, dificuldades de organização e concentração nos estudos. Nosso principal objetivo é ajudar essas pessoas para que possam ter um maior foco e melhor desempenho.
+O público-alvo do nosso projeto são indivíduos neurodivergentes de 17 à 30 anos, que apresentam, principalmente, dificuldades de organização e concentração nos estudos. Nosso principal objetivo é ajudar essas pessoas para que possam ter um maior foco e melhor desempenho.
 
 ## Personas
 
 Arthur Pazzutti é um morador de Belo Horizonte com 18 anos, que possui muita dificuldade em focar nos estudos devido ao seu TDAH (Transtorno do déficit de atenção com hiperatividade). Atualmente está cursando o 1° período de engenharia de software na Puc Minas.  Devido ao TDAH, Arthur não consegue se concentrar ao máximo e desenvolver seus estudos, além disso, tem uma rotina desorganizada, o que faz com que seu foco se distribua em outras atividades.
 
 Vitor Bechara é um morador de Belo Horizonte com 17 anos, que relata sofrer com desafios diários em função do TDAH (Transtorno do déficit de atenção com hiperatividade). Mesmo com um acompanhamento médico e com o consumo de medicamentos controlados, apresenta grande dificuldade em seguir uma rotina e seguir com seus estudos de forma organizada e eficiente. Atualmente está cursando o 1° período de engenharia química na Puc Minas.
+
+Mariana Coimbra Mourthé é uma garota nascida em Curvelo no estado de Minas Gerais. Ela tem 19 anos e descobriu o seu TDAH (Transtorno do déficit de atenção com hiperatividade) aos 10 anos, pois não conseguia aprender matemática. Mesmo consumindo remédios e seguindo o que os médicos a falaram, ela nunca conseguiu se concentrar em atividades relacionadas a exatas. Mariana atualmente reside em Belo Horizonte MG, e está cursando o primeiro período de Odontologia na Newton Paiva.
 
 ## Histórias de Usuários
 
