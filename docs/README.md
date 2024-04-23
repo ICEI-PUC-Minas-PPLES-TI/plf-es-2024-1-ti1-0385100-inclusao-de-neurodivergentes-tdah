@@ -33,11 +33,13 @@ Priorizamos a inclusão de pessoas com neurodivergência em nossa plataforma edu
 
 ## Público-Alvo
 
-O público alvo do nosso projeto são jovens neurodivergentes de 17 à 30 anos, que estejam principalmente com dificuldades de ser organizar e concentrar nos estudos. Nosso principal objetivo é ajudar essas pessoas para que possam ter um maior foco.
+O público alvo do nosso projeto são indivíduos neurodivergentes de 17 à 30 anos, que apresentam, principalmente, dificuldades de organização e concentração nos estudos. Nosso principal objetivo é ajudar essas pessoas para que possam ter um maior foco e melhor desempenho.
 
 ## Personas
 
 Arthur Pazzutti é um morador de Belo Horizonte com 18 anos, que possui muita dificuldade em focar nos estudos devido ao seu TDAH (Transtorno do déficit de atenção com hiperatividade). Atualmente está cursando o 1° período de engenharia de software na Puc Minas.  Devido ao TDAH, Arthur não consegue se concentrar ao máximo e desenvolver seus estudos, além disso, tem uma rotina desorganizada, o que faz com que seu foco se distribua em outras atividades.
+
+Vitor Bechara é um morador de Belo Horizonte com 17 anos, que relata sofrer com desafios diários em função do TDAH (Transtorno do déficit de atenção com hiperatividade). Mesmo com um acompanhamento médico e com o consumo de medicamentos controlados, apresenta grande dificuldade em seguir uma rotina e seguir com seus estudos de forma organizada e eficiente. Atualmente está cursando o 1° período de engenharia química na Puc Minas.
 
 ## Histórias de Usuários
 
