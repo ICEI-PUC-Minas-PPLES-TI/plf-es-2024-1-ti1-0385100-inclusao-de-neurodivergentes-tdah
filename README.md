@@ -1,6 +1,6 @@
-# Nome do projeto
+MindStorm
 
-Escreva um ou dois parágrafo resumindo o objetivo do seu projeto.
+Uma forma de ajudar a todas a atingir seu máximo potencial, com recursos que são disponibilizados em nosso software.
 
 ## Alunos integrantes da equipe
 
