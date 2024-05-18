@@ -1,0 +1,276 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh; 
+    background-color: #161616;
+  }
+  
+  
+  .search-container {
+  background: #ecea79;
+  padding: 20px;
+  border-radius: 10px;
+  border: 3px solid white;
+  margin-top: 30px;
+  }
+  input[type="text"] {
+  width: 300px;
+  padding: 10px;
+  margin-right: 10px;
+  border: 2px solid #161616;
+  border-radius: 10px;
+  }
+  input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #fc6565; 
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid #161616
+  }
+  input[type="submit"]:hover {
+  background-color: #f75050;
+  }
+  
+  /** responsividade **/
+  
+  @media (max-width: 768px) { 
+  .search-container {
+      width: 87.5%;
+  }
+  input[type="submit"] {
+      width: 100%;
+      margin-top: 10px;
+  }
+  input[type="text"] {
+      width: 92.5%;
+      margin-top: 10px;
+  }
+  }
+  
+  @media (max-width: 480px) {
+  .search-container {
+      width: 87.5%;
+  }
+  input[type="submit"] {
+      width: 100% ;
+      margin-top: 10px;
+  }
+  input[type="text"] {
+      width: 93%;
+      margin-top: 10px;
+  }
+   
+  }
+  
+  @media (max-width: 410px) {
+  
+    .logo {
+        display: none;
+    }
+  }
+  
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; 
+  }
+  
+  footer {
+    background-color: #ecea79;
+    text-align: center;
+    padding: 10px 0;
+    color: #161616;
+    grid-area: footer;
+  }
+  
+  
+  /** java script **/
+  
+  .FAVORITOS {
+  max-width: 500px;
+  margin: 25px auto;
+  padding: 10px;
+  background-color: #ecea77;
+  border-radius: 10px;
+  border: 3px solid white;
+  margin: 30px 0px 40px 0px;
+  }
+  
+  
+  .garrafa {
+  display: block;
+  }
+  
+  
+  /** css favoritos **/ 
+  .FAVORITOS > input{
+  border: 2px solid black;
+  }
+  
+  .garrafa ul{
+  list-style: none;
+  list-style-type: none;
+  padding: 0;
+  }
+  
+  .garrafa li{
+  padding: 10px;
+  background-color: #f48282;
+  justify-content: space-between;
+  display: flex;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  
+  }
+  .garrafa li span{
+  flex: 1;
+  text-align: left;
+  }
+  .garrafa li.editButton
+  .garrafa li.deleteButton{
+  margin-left: 5px;
+  }
+  
+  .FAVORITOS h1 {
+  text-align: center;
+  }
+  
+  
+  #taskInput4{
+  width: 93%;
+  padding: 10px;
+  font-size: 13px;
+  border-radius: 10px;
+  margin-top: 20px;
+  border: 2px solid #161616;
+  margin:auto
+  }
+  #botao {
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #fc6565;
+  color: white;
+  border: 2px solid #161616 ;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  }
+  
+  #botao:hover {
+  background-color: #f75050;
+  }
+  
+  .editButton {
+  padding: 10px;
+  font-size: 13px;
+  background-color: #fc6565;
+  color: white;
+  border: 2px solid #161616 ;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  }
+  
+  
+  .deleteButton {
+  padding: 10px;
+  font-size: 13px;
+  background-color: #fc6565;
+  color: white;
+  border: 2px solid #161616 ;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left:10px;
+  }
+  
+  .editButton:hover {
+  
+    background-color: #f75050;
+  }
+  
+  .deleteButton:hover {
+    background-color: #f75050;
+  }
+  
+  /* header */
+  
+  
+  
+  
+  header{
+    grid-area: header;
+    background-color:#ecea77;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header > img{
+    display: flex;
+    justify-content: start;
+  }
+  
+  nav{
+    grid-area: nav;
+    background-color:#ecea77;
+    color: white;
+  }
+  
+  #lista-principal > li{
+    list-style: none;
+    margin-right: 10px;
+    padding: 5px;
+  }
+  
+  #lista-principal{
+    display: flex;
+    justify-content: end;
+  }
+  
+  nav li > a{
+  color: black;
+  text-decoration: none;
+  }
+  
+  main{
+  grid-area: main;
+  }
+  
+  footer{
+    grid-area: footer;
+    background-color:#ecea77;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+  }
+  
+  .container-principal {
+    display: grid;
+    grid-template-areas: 
+        "header nav"
+        "main main"
+        "footer footer";
+    grid-template-columns: 38% 62%;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+  }
+  
+  .pagina {
+  background-color:#f75050 ;
+  border-radius: 10px;
+  }
+  
+  
+  
