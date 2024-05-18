@@ -41,8 +41,13 @@ nav li > a{
     text-decoration: none;
 }
 main{
-    grid-area: main;
+    grid-area: main;   
+    background-image: url(logo.png);  
+    background-repeat: no-repeat;  
+    background-position: center;  
+    background-attachment: fixed;
 }
+
 
 footer{
     grid-area: footer;
