@@ -7,6 +7,12 @@ function validateNewTask() {
     return !!exists;
 }
 
+function saveName() {
+    const name = document.getElementById('inputNewTask').value;
+    localStorage.setItem('userName', name);
+    window.location.href = "../dashboard/dashboard.html";
+}
+
 function newTask() {
     let input = document.getElementById('inputNewTask');
     input.style.border = '';

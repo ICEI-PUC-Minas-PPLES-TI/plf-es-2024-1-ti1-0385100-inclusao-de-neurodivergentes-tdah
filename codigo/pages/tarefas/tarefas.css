@@ -87,7 +87,10 @@ footer{
     list-style-type: none;
     padding: 0;
 }
-
+#agenda{
+    background-color: #f48282;
+    border-radius: 10px;
+}
 .wraper li{
     padding: 10px;
     background-color: #f48282;
