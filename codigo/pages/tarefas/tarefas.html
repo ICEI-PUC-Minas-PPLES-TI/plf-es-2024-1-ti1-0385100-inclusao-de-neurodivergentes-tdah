@@ -9,7 +9,7 @@
 <body>
     <div class="container-principal">
         <header>
-            <a href="/codigo/pages/dashboard/dashboard.html"><img src="logo (1).png" alt="logo" width="80px"></a>
+            <a href="../dashboard/dashboard.html"><img src="logo (1).png" alt="logo" width="80px"></a>
             <nav>
                 <ul id="lista-principal">
                 <li><a href="#">LOGIN</a></li>
@@ -21,23 +21,21 @@
         </header>
         <main>
             <div class="wraper">
-                <div class="container">
-                    <h1>Tarefas Diárias</h1>
-                    <input type="text" id="taskInput1"  name="name"  placeholder="Adicione uma tarefa">
-                    <button onclick="addTask()">Adicionar</button>
-                    <ul id="taskList1"></ul>
-                </div>
-                <div class="container">
-                    <h1>Tarefas Importantes </h1>
-                    <input type="text" id="taskInput2" name="name" placeholder="Adicione uma tarefa">
-                    <button onclick="addTask()">Adicionar</button>
-                    <ul id="taskList2"></ul>
-                </div>
-                <div class="container">
-                    <h1>Entregas de Trabalho</h1>
-                    <input type="text" id="taskInput3" name="name" placeholder="Adicione uma tarefa">
-                    <button onclick="addTask()">Adicionar</button>
-                    <ul id="taskList3"></ul>
+                <div class="content">
+                    <h1>Lista de Tarefas</h1>
+                    <div class="contentItem">
+                        <input type="text" id="inputNewTask" placeholder="Digite sua tarefa" />
+                        <button onclick="newTask()" id="btnNewTask">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-plus-lg" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="content-body">
+                        <ul id="toDoList"></ul>
+                    </div>
                 </div>
                 </div>
         </main>

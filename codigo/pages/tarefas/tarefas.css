@@ -46,6 +46,7 @@ main{
     background-repeat: no-repeat;  
     background-position: center;   
     background-attachment: fixed;
+    background-color: black;
 }
 
 footer{
@@ -67,18 +68,17 @@ footer{
 }
 
 /*MAIN*/
+:root{
+    --color-dark: rgb(14,14,14);
+    --color-dark2: rgb(32,32,32);
+    --color-dark3: rgb(22,22,22);
+    --color-white: #fff;
+    --color-green: rgb(103,195,80);
+    --color-green2: rgb(51,149,26);
+    --color-red: rgb(184,40,35);
+    --color-red2: rgb(146,22,17);
+}
 
-.container{
-    max-width: 500px;
-    margin: 30px auto;
-    padding: 20px;
-    background-color: #ecea77;
-    border-radius: 10px;
-    border: 3px solid #fff;
-}
-.container > input{
-    border: 2px solid black;
-}
 .wraper{
     display: block;
 }
@@ -87,7 +87,10 @@ footer{
     list-style-type: none;
     padding: 0;
 }
-
+#agenda{
+    background-color: #f48282;
+    border-radius: 10px;
+}
 .wraper li{
     padding: 10px;
     background-color: #f48282;
@@ -97,52 +100,136 @@ footer{
     margin-bottom: 5px;
 
 }
-main > li:hover{
-    background-color: #5e3eaf;
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.wraper li span{
-    flex: 1;
-    text-align: left;
-}
-.wraper li.editButton
-.wraper li.deleteButton{
-    margin-left: 5px;
+.wraper{
+    gap: 4rem;
 }
 
-input{
-    width: 80%;
-    padding: 8px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    background-color: #ecea77;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 20px;
+    border: 3px solid white;
+}
+
+.content > h1{
+    display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    color: black;
 }
-button{
-    padding: 8px 16px;
-    font-size: 16px;
-    background-color: #fc6565;
-    color: #fff;
+
+.contentItem{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+#inputNewTask,
+#btnNewTask{
     border: none;
-    border-radius: 5px;
+    font: 1rem;
+    outline: none;
+    padding: 1rem;
+
+}
+
+#inputNewTask{
+    width: 20rem;
+    border-radius: 1rem;
+}
+
+#btnNewTask{
+    background-color: var(--color-dark2);
+    color: var(--color-white);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border: 2px solid black;
+    transition: 400ms;
 }
-button:hover{
-    background-color: #f75050;
+#btnNewTask:hover{
+    background-color: var(--color-dark3);
 }
-main {
-    grid-area: main;
-    background-color: #161616;
-    padding: 20px;
+
+#toDoList{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
 }
-#agenda{
-    background-color: #fc6565;
-    border-radius: 10px;
+
+#toDoList li{
+    list-style-type: none;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+    color: white;
 }
+
+.btn-delete{
+    border: none;
+    background-color: var(--color-red);
+    color: white;
+    font-size: 1rem;
+    padding: .4rem .8rem;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .4s;
+    
+}
+.content-body> ul > li{
+    display: flex;
+    align-items: center;
+}
+.btn-delete:hover{
+    background-color: var(--color-red2);
+}
+
+.btn-ok{
+    background-color: var(--color-green);
+    cursor: pointer;
+    color: white;
+    font-size: 1rem;
+    padding: .4rem .8rem;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .4s;
+    border: none;
+}
+.btn-ok:hover{
+    background-color: var(--color-green2);
+}
+#toDoList > li{
+    background-color: #f79494;
+    padding: 7px;
+    border-radius: 20px;
+    color: black;
+    align-items: center;
+    font-family: arial;
+    font-size: 1.3rem;
+}
+
 
 @media (min-width: 1200px) {
     .wraper{
