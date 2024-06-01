@@ -272,5 +272,11 @@ body {
   border-radius: 10px;
   }
   
-  
+  main {   
+    grid-area: main;   padding: 20px;   
+    background-image: url(img/logotiaw.png);   
+    background-repeat: no-repeat;  
+    background-position: center;   
+    background-attachment: fixed; 
+}
   
