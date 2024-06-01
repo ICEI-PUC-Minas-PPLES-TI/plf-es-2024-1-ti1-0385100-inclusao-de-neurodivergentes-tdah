@@ -42,7 +42,7 @@ nav li > a{
 }
 main{
     grid-area: main;
-    background-image: url(/codigo/assets/css/js/images/fonts/logo\ \(1\).png);  
+    background-image: url(logo\ \(1\).png);  
     background-repeat: no-repeat;  
     background-position: center;   
     background-attachment: fixed;
