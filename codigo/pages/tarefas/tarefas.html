@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="tarefas.css">
     <title>Tarefas</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="container-principal">
@@ -36,6 +37,14 @@
                     <div class="content-body">
                         <ul id="toDoList"></ul>
                     </div>
+                </div>
+                <div class="grafico">
+                    <form id="estudoForm">
+                        <input type="text" id="materia" placeholder="Matéria" required>
+                        <input type="number" id="horas" placeholder="Horas" required>
+                        <button type="submit">Adicionar</button>
+                    </form>
+                    <canvas id="grafico"></canvas>
                 </div>
                 </div>
         </main>
