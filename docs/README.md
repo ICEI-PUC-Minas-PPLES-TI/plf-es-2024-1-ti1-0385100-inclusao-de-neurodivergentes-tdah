@@ -67,7 +67,8 @@ as decisões judiciais relevantes para minha prática profissional.
 ## Requisitos
 
 Os requisitos de um projeto são classificados em dois grupos:
-Requisitos Funcionais:
+Requisitos Funcionais:  
+
 RF-01: Cadastro de usuários/ Login
 RF-02: Seleção da aba "Estudos"
 RF-03: Seleção da aba "Agenda"
