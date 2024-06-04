@@ -67,6 +67,7 @@ as decisões judiciais relevantes para minha prática profissional.
 ## Requisitos
 
 Os requisitos de um projeto são classificados em dois grupos:
+
 Requisitos Funcionais:  
 
 RF-01: Cadastro de usuários/ Login
@@ -81,6 +82,7 @@ RF-09: Área onde possa procurar e ler livros
 RF-10: Cronômetro para estudo
 
 Requisitos não Funcionais: 
+
 RNF-01: Segurança no login
 RNF-02: Design responsivo
 RNF-03: Atualização rápida das suas tarefas
