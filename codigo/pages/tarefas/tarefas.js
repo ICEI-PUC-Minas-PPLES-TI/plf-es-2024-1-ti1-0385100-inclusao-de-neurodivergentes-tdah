@@ -97,43 +97,43 @@ function editItem(taskName) {
 showValues();
 
 //GRAFICO
-
 let estudoDiario = JSON.parse(localStorage.getItem('estudoDiario')) || {};
 let chart = null;
 
 document.getElementById('estudoForm').addEventListener('submit', function(event) {
   event.preventDefault();
-  
+
   const materia = document.getElementById('materia').value.trim().toLowerCase();
   const horas = parseInt(document.getElementById('horas').value);
-  
+
   // Inicializar array para a matéria se não existir
   if (!estudoDiario[materia]) {
     estudoDiario[materia] = [];
   }
-  
+
   // Adicionar as horas ao array da matéria correspondente
   estudoDiario[materia].push(horas);
-  
+
   // Armazenar de volta no localStorage
   localStorage.setItem('estudoDiario', JSON.stringify(estudoDiario));
-  
-  // Atualizar gráfico
+
+  // Atualizar gráfico e lista de matérias
   atualizarGrafico(estudoDiario);
+  atualizarListaMaterias(estudoDiario);
 });
 
 function atualizarGrafico(estudoDiario) {
   const ctx = document.getElementById('grafico').getContext('2d');
-  
+
   // Obter nomes das matérias e somas das horas
   const materias = Object.keys(estudoDiario);
   const horasEstudo = materias.map(materia => estudoDiario[materia].reduce((a, b) => a + b, 0));
-  
+
   // Se já houver um gráfico, destrua-o antes de criar um novo
   if (chart) {
     chart.destroy();
   }
-  
+
   // Dados do gráfico
   const data = {
     labels: materias,
@@ -145,7 +145,7 @@ function atualizarGrafico(estudoDiario) {
       borderWidth: 1
     }]
   };
-  
+
   // Configurações do gráfico
   const config = {
     type: 'bar',
@@ -158,13 +158,45 @@ function atualizarGrafico(estudoDiario) {
       }
     }
   };
-  
+
   // Renderizar gráfico
   chart = new Chart(ctx, config);
 }
 
-// Inicializar gráfico com dados do localStorage
-document.addEventListener('DOMContentLoaded', (event) => {
+function atualizarListaMaterias(estudoDiario) {
+  const materiaList = document.getElementById('materiaList');
+  materiaList.innerHTML = '';
+
+  for (let materia in estudoDiario) {
+    const listItem = document.createElement('li');
+    listItem.textContent = `${materia} - ${estudoDiario[materia].reduce((a, b) => a + b, 0)} horas`;
+    const removeButton = document.createElement('button');
+    removeButton.textContent = 'Remover';
+    removeButton.className = 'btn-remove';
+    removeButton.onclick = () => removerMateria(materia);
+
+    listItem.appendChild(removeButton);
+    materiaList.appendChild(listItem);
+  }
+}
+
+function removerMateria(materia) {
+  delete estudoDiario[materia];
+  localStorage.setItem('estudoDiario', JSON.stringify(estudoDiario));
+  atualizarGrafico(estudoDiario);
+  atualizarListaMaterias(estudoDiario);
+}
+
+function removerTudo() {
+  estudoDiario = {};
+  localStorage.setItem('estudoDiario', JSON.stringify(estudoDiario));
+  atualizarGrafico(estudoDiario);
+  atualizarListaMaterias(estudoDiario);
+}
+
+// Inicializar gráfico e lista de matérias com dados do localStorage
+document.addEventListener('DOMContentLoaded', () => {
   estudoDiario = JSON.parse(localStorage.getItem('estudoDiario')) || {};
   atualizarGrafico(estudoDiario);
+  atualizarListaMaterias(estudoDiario);
 });

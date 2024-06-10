@@ -287,6 +287,17 @@ main{
     transition: 0.3s ease-in-out;
 }
 
+.btn-remove, .btn-clear {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 12px;
+    background-color: rgb(26, 26, 26);
+    padding: 10px;
+    border-radius: 15px;
+  }
+
 @media (min-width: 1200px) {
     .wraper{
         display: flex;
