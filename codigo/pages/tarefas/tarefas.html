@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="tarefas.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="tarefas.css" />
     <title>Tarefas</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
     <div class="container-principal">
         <header>
-            <a href="../dashboard/dashboard.html"><img src="logo (1).png" alt="logo" width="80px"></a>
+            <a href="../dashboard/dashboard.html"><img src="logo (1).png" alt="logo" width="80px" /></a>
             <nav>
                 <ul id="lista-principal">
-                <li><a href="#">LOGIN</a></li>
-                <li><a href="#">RESUMOS</a></li>
-                <li id="agenda"><a href="index.html">TAREFAS</a></li>
-                <li><a href="#">ESTUDO</a></li>
+                    <li><a href="#">LOGIN</a></li>
+                    <li><a href="#">RESUMOS</a></li>
+                    <li id="agenda"><a href="index.html">TAREFAS</a></li>
+                    <li><a href="#">ESTUDO</a></li>
                 </ul>
             </nav>
         </header>
@@ -40,21 +42,22 @@
                 </div>
                 <div class="grafico">
                     <form id="estudoForm">
-                        <input type="text" id="materia" placeholder="Matéria" required>
-                        <input type="number" id="horas" placeholder="Horas" required>
+                        <div class="campoForm">
+                            <input type="text" id="materia" placeholder="Matéria:" required />
+                            <input type="number" id="horas" placeholder="Horas:" required />
+                        </div>
                         <button type="submit">Adicionar</button>
                     </form>
                     <canvas id="grafico"></canvas>
                 </div>
-                </div>
+            </div>
         </main>
         <footer>
             <p><span class="destaque">MindStorm</span> &copy; 2024</p>
         </footer>
     </div>
 
-
-
     <script src="tarefas.js"></script>
 </body>
+
 </html>

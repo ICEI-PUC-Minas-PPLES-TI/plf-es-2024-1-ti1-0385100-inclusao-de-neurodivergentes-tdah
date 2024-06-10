@@ -263,8 +263,28 @@ main{
 }
 #estudoForm button:hover{
     background-color: rgb(182, 182, 182);
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
     cursor: pointer;
+}
+
+.campoForm{
+    display: flex;
+    gap: 20px;
+}
+
+.btn-edit {
+    background: none;
+    border: none;
+    cursor: pointer;
+    background-color: #fe5252;
+    color: white;
+    padding: 15px;
+    width: 50px;
+    border-radius: 50%;
+  }
+.btn-edit:hover{
+    background-color: #f61919;
+    transition: 0.3s ease-in-out;
 }
 
 @media (min-width: 1200px) {
