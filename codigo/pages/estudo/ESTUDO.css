@@ -26,6 +26,11 @@ header > img {
   display: flex;
   justify-content: start;
 }
+
+header .pagina-estudos {
+  background-color: #4f0832;
+  border-radius: 10px;
+}
 nav {
   grid-area: nav;
   background-color: #07041e;
