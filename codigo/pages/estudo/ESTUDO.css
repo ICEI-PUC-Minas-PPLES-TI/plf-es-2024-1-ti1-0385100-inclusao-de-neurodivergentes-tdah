@@ -82,7 +82,7 @@ footer {
   header {
     flex-direction: column;
     align-items: center;
-    padding-bottom:10px;
+    padding-bottom: 10px;
   }
 }
 
@@ -102,7 +102,7 @@ main {
 
 /* css barra de pesquisa */
 .search-container {
-  margin-top:40px;
+  margin-top: 40px;
   color: white;
   text-align: center;
   background: #280a33;
@@ -112,7 +112,7 @@ main {
   width: 50%;
 }
 .search-container h1 {
-  padding-bottom:20px;
+  padding-bottom: 20px;
 }
 input[type="text"] {
   width: 100%;
@@ -145,20 +145,17 @@ input[type="submit"]:hover {
   input[type="text"] {
     width: 100%;
   }
-
-  
-
 }
 
 /* css conteudos favoritos */
 .FAVORITOS {
-  background-color:#280a33;
+  background-color: #280a33;
   color: #fff;
   padding: 20px;
   border-radius: 10px;
   margin: 20px auto;
   width: 50%;
-  text-align:center;
+  text-align: center;
   border: 3px solid white;
 }
 
@@ -166,7 +163,7 @@ input[type="submit"]:hover {
   margin-bottom: 20px;
 }
 #taskInput4 {
-  width: 100%;;
+  width: 100%;
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 10px;
@@ -175,15 +172,15 @@ input[type="submit"]:hover {
 #botao {
   background-color: #4f0832;
   border: none;
-  padding: 10px ;
+  padding: 10px;
   color: #fff;
   cursor: pointer;
   border-radius: 10px;
   margin: 0px 0px 10px;
   width: 100%;
-  
 }
-.editButton, .deleteButton {
+.editButton,
+.deleteButton {
   background-color: #280a33;
   border: none;
   padding: 5px 10px;
@@ -209,25 +206,23 @@ input[type="submit"]:hover {
 }
 
 @media (max-width: 530px) {
-   .FAVORITOS {
+  .FAVORITOS {
     width: 80%;
   }
 }
 
-/* java script */ 
+/* java script */
 
 li span {
-  display:block;
+  display: block;
   margin-bottom: 13px;
   font-size: 75%;
   padding-top: 5px;
 }
 
 button {
-  
-  width:100px;
-  padding:8px;
-
+  width: 100px;
+  padding: 8px;
 }
 
 button:hover {
