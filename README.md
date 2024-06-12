@@ -1,4 +1,4 @@
-#MindStorm
+## MindStorm
 
 Uma forma de ajudar a todas a atingir seu máximo potencial, com recursos que são disponibilizados em nosso software.
 
