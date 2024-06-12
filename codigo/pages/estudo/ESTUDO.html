@@ -1,79 +1,62 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ESTUDO PRINCIPAL</title>
+    <title>Document</title>
     <link rel="stylesheet" href="ESTUDO.css" />
   </head>
 
   <body>
     <div class="container-principal">
+      <header>
+       <a href="../dashboard/dashboard.html"> <img src="img/logo.png" alt="logo" width="80px"> </a>
+        <nav>
+          <ul id="lista-principal">
+            <li><a href="#">LOGIN</a></li>
+            <li><a href="#">RESUMOS</a></li>
+            <li><a href="#">TAREFAS</a></li>
+            <li class="pagina-estudos"><a href="ESTUDO.html">ESTUDOS</a></li>
+          </ul>
+        </nav>
+      </header>
 
-    <header>
+      <main>
+        <div class="container-estudo">
+          <div class="search-container">
+            <h1>Explore</h1>
+            <form
+              action="https://scholar.google.com/scholar"
+              method="GET"
+              target="_blank"
+            >
+              <input
+                type="text"
+                name="q"
+                placeholder="Pesquisar por artigos..."
+              />
+              <input type="submit" value="Pesquisar" />
+            </form>
+          </div>
 
-        <img class="logo" src="img/logotiaw.png" alt="logo" width="80px">
-    </header>
-    <nav>
-        <ul id="lista-principal">
-        <li><a href="#">LOGIN</a></li>
-        <li><a href="#">RESUMOS</a></li>
-        <li><a href="#">TAREFAS</a></li>
-        <li class="pagina"><a href="ESTUDO.html">ESTUDOS</a></li>
-        </ul>
-    </nav>
-
-    
-
-    <main>
-      <div class="garrafa">
-        <div class="search-container">
-          <form
-            action="https://scholar.google.com/scholar"
-            method="GET"
-            target="_blank"
-          >
-            <input type="text" name="q" placeholder="Pesquisar por artigos" />
-            <input type="submit" value="Pesquisar" />
-          </form>
+          <div class="FAVORITOS">
+            <h1>Conteúdos Favoritos</h1>
+            <input
+              type="text"
+              id="taskInput4"
+              placeholder="Adicione aqui a url do conteúdo para salvá-la"
+            />
+            <button id="botao" onclick="addTask()">Adicionar</button>
+            <ul id="taskList4"></ul>
+          </div>
         </div>
+      </main>
 
-        <div class="FAVORITOS">
-          <h1>Conteúdos Favoritos</h1>
-          <input
-            type="text"
-            id="taskInput4"
-            placeholder="Adicione aqui a url do conteúdo para salvá-la"
-          />
-          <button id="botao" onclick="addTask()">Adicionar</button>
-          <ul id="taskList4"></ul>
-        </div>
-      </div>
-    </main>
-
-    <footer>
-      <p><span class="destaque">MindStorm</span> &copy; 2024</p>
-    </footer>
-
-
-
-
+      <footer>
+        <p><span class="destaque">MindStorm</span> &copy; 2024</p>
+      </footer>
     </div>
+    <script src="ESTUDO.js"></script>
   </body>
-
-  <script src="ESTUDO.js"></script>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
