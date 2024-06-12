@@ -12,7 +12,7 @@ li {
 
 header {
   grid-area: header;
-  background-color: #ecea77;
+  background-color: #280a33;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,6 +45,7 @@ nav li>a {
 }
 
 main {
+  background-color: #07041e;
   grid-area: main;
   padding: 20px;
   background-image: url(logo.png);
@@ -78,7 +79,6 @@ p {
   border-radius: 5px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
-  cursor: pointer;
   transition: box-shadow 0.3s;
 }
 
@@ -89,7 +89,6 @@ p {
   border-radius: 5px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
-  cursor: pointer;
   transition: box-shadow 0.3s;
 }
 
@@ -100,7 +99,6 @@ p {
   border-radius: 5px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
-  cursor: pointer;
   transition: box-shadow 0.3s;
 }
 
@@ -111,13 +109,12 @@ p {
   border-radius: 5px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
-  cursor: pointer;
   transition: box-shadow 0.3s;
 }
 
 footer {
   grid-area: footer;
-  background-color: #ecea77;
+  background-color: #280a33;
   align-items: center;
   display: flex;
   justify-content: center;
@@ -134,14 +131,15 @@ footer {
   min-height: 100vh;
 }
 
-button {
-  background-color: #3d3d3d;
-  color: #FFFFFF;
+button.card {
+  background-color: #ffffff;
+  color: #000000;
   border-radius: 5px;
   padding: 10px 20px;
   font-size: 16px;
   box-shadow: 0 4px #161616;
   transition: background-color 0.3s, transform 0.3s;
+  cursor: pointer;
 }
 
 button:hover {
@@ -151,4 +149,51 @@ button:hover {
 button:active {
   transform: scale(1.1);
   box-shadow: 0 2px #161616;
+}
+
+
+.perfil {
+  background-color: skyblue;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 0px;
+  margin-top: 0px;
+  display: flex;
+}
+
+.perfil:hover {
+  background-color: blue;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+.dropdown-child {
+  display: none;
+  position: absolute; 
+  top: 100%; 
+  left: 0; 
+  background-color: #292828;
+  min-width: 200px;
+  border-radius: 4px;
+  z-index: 1; 
+}
+
+.dropdown-child a {
+  color: #ecea79;
+  padding: 20px;
+  text-decoration: none;
+  display: block; 
+}
+
+.dropdown:hover .dropdown-child {
+  display: block; 
+}
+img {
+  cursor: pointer;
+  
 }

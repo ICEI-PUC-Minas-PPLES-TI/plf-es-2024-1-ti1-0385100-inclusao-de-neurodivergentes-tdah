@@ -1,0 +1,72 @@
+header {
+    grid-area: header;
+    background-color: #ecea77;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    grid-area: main;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-image: url(logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #161616;
+
+}
+
+header>img {
+    display: flex;
+}
+
+.perfil-card {
+  
+  display: flex;
+  width: calc(25% - 20px); 
+  padding: 20px;
+  background-color: #ecea79;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+  justify-content: center;
+  align-items: center;
+  max-width: 350px; 
+  margin: 0 auto;
+}
+
+  .perfil-card>img{
+    align-items: center;
+    display: block;
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: -80px;
+  }
+  footer {
+    grid-area: footer;
+    background-color: #ecea77;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+  }
+  
+.container-principal {
+  display: grid;
+  grid-template-areas: "header header"
+    "main main"
+    "footer footer";
+  grid-template-columns: 2fr 10fr/ auto;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
