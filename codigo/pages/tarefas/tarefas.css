@@ -73,7 +73,7 @@ footer {
     align-items: center;
     display: flex;
     justify-content: center;
-    padding: 15px;
+    padding: 30px;
     color: white;
 }
 
@@ -101,6 +101,7 @@ footer {
     flex-direction: column;
     gap: 20px;
     align-items: center;
+    width: 30%;
 }
 
 .wraper ul {
@@ -116,7 +117,7 @@ footer {
 
 .wraper li {
     padding: 10px;
-    background-color: #280a33;
+    background-color: #411252;
     color: white;
     justify-content: space-between;
     display: flex;
@@ -177,6 +178,8 @@ footer {
     transition: 400ms;
 }
 
+
+
 #btnNewTask:hover {
     background-color: var(--color-dark3);
 }
@@ -193,9 +196,11 @@ footer {
     font-size: 1.4rem;
     text-transform: capitalize;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     color: white;
+    
 }
+
 
 .btn-delete {
     border: none;
@@ -243,7 +248,7 @@ footer {
 }
 
 #toDoList > li {
-    background-color: #280a33;
+    background-color: #411252;
     padding: 7px;
     border-radius: 20px;
     color: white;
