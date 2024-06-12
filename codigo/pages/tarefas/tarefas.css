@@ -17,7 +17,7 @@ body {
 
 header {
     grid-area: header;
-    background-color: #280a33;
+    background-color: #07041e;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -32,7 +32,7 @@ header > img {
 
 nav {
     grid-area: nav;
-    background-color: #280a33;
+    background-color: #07041e;
     color: white;
 }
 
@@ -69,7 +69,7 @@ main {
 
 footer {
     grid-area: footer;
-    background-color: #280a33;
+    background-color: #07041e;
     align-items: center;
     display: flex;
     justify-content: center;
@@ -128,7 +128,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    background-color: #4f0832;
+    background-color: #280a33;
     margin-top: 20px;
     padding: 20px;
     border-radius: 20px;
@@ -254,7 +254,7 @@ footer {
 
 .grafico {
     margin-top: 20px;
-    background-color: #4f0832;
+    background-color: #280a33;
     width: 90%;
     max-width: 500px;
     padding: 20px;
