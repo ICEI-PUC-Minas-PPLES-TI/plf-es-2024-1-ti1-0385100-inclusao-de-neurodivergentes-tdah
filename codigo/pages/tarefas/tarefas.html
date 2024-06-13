@@ -1,53 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="tarefas.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="tarefas.css" />
     <title>Tarefas</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
     <div class="container-principal">
         <header>
-            <img src="logo (1).png" alt="logo" width="80px">
+            <a href="../dashboard/dashboard.html"><img src="logo (1).png" alt="logo" width="80px" /></a>
             <nav>
                 <ul id="lista-principal">
-                <li><a href="#">LOGIN</a></li>
-                <li><a href="#">RESUMOS</a></li>
-                <li id="agenda"><a href="index.html">TAREFAS</a></li>
-                <li><a href="#">ESTUDO</a></li>
+                    <li><a href="#">LOGIN</a></li>
+                    <li><a href="#">RESUMOS</a></li>
+                    <li id="agenda"><a href="index.html">TAREFAS</a></li>
+                    <li><a href="#">ESTUDO</a></li>
                 </ul>
             </nav>
         </header>
         <main>
             <div class="wraper">
-                <div class="container">
-                    <h1>Tarefas Diárias</h1>
-                    <input type="text" id="taskInput1"  name="name"  placeholder="Adicione uma tarefa">
-                    <button onclick="addTask()">Adicionar</button>
-                    <ul id="taskList1"></ul>
+                <div class="content">
+                    <h1>Lista de Tarefas</h1>
+                    <div class="contentItem">
+                        <input type="text" id="inputNewTask" placeholder="Digite sua tarefa" />
+                        <button onclick="newTask()" id="btnNewTask">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-plus-lg" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="content-body">
+                        <ul id="toDoList"></ul>
+                    </div>
                 </div>
-                <div class="container">
-                    <h1>Tarefas Importantes </h1>
-                    <input type="text" id="taskInput2" name="name" placeholder="Adicione uma tarefa">
-                    <button onclick="addTask()">Adicionar</button>
-                    <ul id="taskList2"></ul>
+                <div class="grafico">
+                    <form id="estudoForm">
+                        <h1>Gráfico de Matérias</h1>
+                        <div class="campoForm">
+                            <input type="text" id="materia" placeholder="Matéria:" required />
+                            <input type="number" id="horas" placeholder="Horas:" required />
+                        </div>
+                        <button type="submit">Adicionar</button>
+                    </form>
+                    <canvas id="grafico"></canvas>
+                    <ul id="materiaList"></ul>
+  <button class="btn-clear" onclick="removerTudo()">Remover Tudo</button>
                 </div>
-                <div class="container">
-                    <h1>Entregas de Trabalho</h1>
-                    <input type="text" id="taskInput3" name="name" placeholder="Adicione uma tarefa">
-                    <button onclick="addTask()">Adicionar</button>
-                    <ul id="taskList3"></ul>
-                </div>
-                </div>
+            </div>
         </main>
         <footer>
             <p><span class="destaque">MindStorm</span> &copy; 2024</p>
         </footer>
     </div>
 
-
-
     <script src="tarefas.js"></script>
 </body>
+
 </html>

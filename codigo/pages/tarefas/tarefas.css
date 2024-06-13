@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,141 +7,347 @@
 
 body {
     margin: 0;
-    font-family:  'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
+
+    /* Adicionado para fazer o body ocupar toda a altura da viewport */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-header{
+header {
     grid-area: header;
-    background-color:#ecea77;
+    background-color: #07041e;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 10px; /* Adicionado para evitar sobreposição do conteúdo */
 }
-header > img{
+
+header > img {
     display: flex;
     justify-content: start;
 }
-nav{
+
+nav {
     grid-area: nav;
-    background-color:#ecea77;
+    background-color: #07041e;
     color: white;
 }
-#lista-principal{
+
+#lista-principal {
     display: flex;
     justify-content: end;
 }
-#lista-principal > li{
+
+#lista-principal > li {
     list-style: none;
     margin-right: 10px;
     padding: 5px;
 }
-nav li > a{
-    color: black;
+
+nav li > a {
+    color: #FFF;
     text-decoration: none;
 }
-main{
+
+main {
     grid-area: main;
+    background-image: url(logo\ \(1\).png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #07041e;
+
+    /* Adicionado para fazer o main ocupar o espaço restante */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-footer{
+footer {
     grid-area: footer;
-    background-color:#ecea77;
+    background-color: #07041e;
     align-items: center;
     display: flex;
     justify-content: center;
-    padding: 15px;
-}
-.container-principal{
-    display: grid;
-    grid-template-areas: "header header"
-                "main main"
-                "footer footer";
-    grid-template-columns: 2fr 10fr/ auto;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
+    padding: 30px;
+    color: white;
 }
 
-/*MAIN*/
+.container-principal {
+    display: flex;
+    flex-direction: column;
 
-.container{
-    max-width: 500px;
-    margin: 30px auto;
-    padding: 20px;
-    background-color: #ecea77;
-    border-radius: 10px;
-    border: 3px solid #fff;
+    /* Adicionado para fazer o container ocupar o espaço restante */
+    flex: 1;
 }
-.container > input{
-    border: 2px solid black;
+
+:root {
+    --color-dark: rgb(14,14,14);
+    --color-dark2: rgb(32,32,32);
+    --color-dark3: rgb(22,22,22);
+    --color-white: #fff;
+    --color-green: rgb(103,195,80);
+    --color-green2: rgb(51,149,26);
+    --color-red: rgb(184,40,35);
+    --color-red2: rgb(146,22,17);
 }
-.wraper{
-    display: block;
+
+.wraper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 30%;
 }
-.wraper ul{
+
+.wraper ul {
     list-style: none;
     list-style-type: none;
     padding: 0;
 }
 
-.wraper li{
-    padding: 10px;
-    background-color: #f48282;
-    justify-content: space-between;
-    display: flex;
-    border-radius: 5px;
-    margin-bottom: 5px;
-
-}
-main > li:hover{
-    background-color: #5e3eaf;
-}
-.wraper li span{
-    flex: 1;
-    text-align: left;
-}
-.wraper li.editButton
-.wraper li.deleteButton{
-    margin-left: 5px;
-}
-
-input{
-    width: 80%;
-    padding: 8px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
-button{
-    padding: 8px 16px;
-    font-size: 16px;
-    background-color: #fc6565;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border: 2px solid black;
-}
-button:hover{
-    background-color: #f75050;
-}
-main {
-    grid-area: main;
-    background-color: #161616;
-    padding: 20px;
-}
-#agenda{
-    background-color: #fc6565;
+#agenda {
+    background-color: #af0832;
     border-radius: 10px;
 }
 
+.wraper li {
+    padding: 10px;
+    background-color: #411252;
+    color: white;
+    justify-content: space-between;
+    display: flex;
+    border-radius: 15px;
+    margin-bottom: 5px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #280a33;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    border: 3px solid white;
+
+    /* Ajustado para melhorar a responsividade */
+    width: 90%;
+    max-width: 800px;
+}
+
+.content > h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.contentItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+#inputNewTask,
+#btnNewTask {
+    border: none;
+    font: 1rem;
+    outline: none;
+    padding: 1rem;
+}
+
+#inputNewTask {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 1rem;
+}
+
+#btnNewTask {
+    background-color: var(--color-dark2);
+    color: var(--color-white);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+
+
+#btnNewTask:hover {
+    background-color: var(--color-dark3);
+}
+
+#toDoList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+}
+
+#toDoList li {
+    list-style-type: none;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    
+}
+
+
+.btn-delete {
+    border: none;
+    background-color: var(--color-red);
+    color: white;
+    font-size: 1rem;
+    padding: .4rem .8rem;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.content-body > ul > li {
+    display: flex;
+    align-items: center;
+}
+
+.btn-delete:hover {
+    background-color: var(--color-red2);
+}
+
+.btn-ok {
+    background-color: var(--color-green);
+    cursor: pointer;
+    color: white;
+    font-size: 1rem;
+    padding: .4rem .8rem;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s;
+    border: none;
+}
+
+.btn-ok:hover {
+    background-color: var(--color-green2);
+}
+
+#toDoList > li {
+    background-color: #411252;
+    padding: 7px;
+    border-radius: 20px;
+    color: white;
+    align-items: center;
+    font-family: arial;
+    font-size: 1.3rem;
+}
+
+.grafico {
+    margin-top: 20px;
+    background-color: #280a33;
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 20px;
+    border: 3px solid white;
+}
+
+#estudoForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    color: white;
+}
+
+#estudoForm input {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+
+#estudoForm button {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#estudoForm button:hover {
+    background-color: rgb(182, 182, 182);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.campoForm {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-edit {
+    background: none;
+    border: none;
+    cursor: pointer;
+    background-color: #fe5252;
+    color: white;
+    padding: 15px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.btn-edit:hover {
+    background-color: #f61919;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-remove, .btn-clear {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 12px;
+    background-color: #e00a2a;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+/* Corrigido o seletor para incluir 'px' */
 @media (min-width: 1200px) {
-    .wraper{
+    .wraper {
         display: flex;
+    }
+}
+
+@media (max-width: 420px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .wraper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
     }
 }
