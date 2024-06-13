@@ -218,6 +218,7 @@ li .taskTitle {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
+  font-size: 75%;
 }
 
 li .taskContent {
