@@ -1,0 +1,512 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #280a33;
+   
+}
+
+header {
+    background-color: #280a33;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    grid-area: header;
+}
+
+header > img {
+    display: flex;
+    justify-content: start;
+}
+
+nav {
+    background-color: #280a33;
+}
+
+
+#lista-principal {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#lista-principal > li {
+    list-style: none;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+nav li > a {
+    color: white;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #280a33;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    grid-area: footer;
+    color: white;
+}
+
+.container-principal {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "aside main"
+        "footer footer";
+    grid-template-columns: 26% 74%;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+.grid-principal {
+    display: contents;
+}
+
+aside.criar-resumo {
+    grid-area: aside;
+    background-color: #4f0832;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border-radius: 6px;
+    margin: 0px 0px 10px 55px;
+    -webkit-box-shadow:0px 0px 178px 0px rgba(171,46,255,0.28);
+-moz-box-shadow: 0px 0px 178px 0px rgba(171,46,255,0.28);
+box-shadow: 0px 0px 178px 0px rgba(171,46,255,0.28);
+background: rgba(131, 63, 186, 0.13);
+border-radius: 16px;
+border: 1px solid rgba(131, 63, 186, 0.36);
+}
+
+.fazer-resumo textarea,input{
+    border: solid #5f00cc 0px;
+    box-shadow: rgba(166, 166, 166, 0.802) 0px 2px 20px -4px;
+    border-radius: 9px;
+    transition : 1146ms;
+    transform: translateY(0);
+}
+
+main.fazer-resumo {
+    grid-area: main;
+    padding: 0;
+    margin: 0px auto;
+    background-color: #4f0832;
+    width: 90%;
+    height: 98.6%;
+    box-sizing: border-box;
+    border-radius: 6px;
+    -webkit-box-shadow:0px 0px 178px 0px rgba(171,46,255,0.28);
+-moz-box-shadow: 0px 0px 178px 0px rgba(171,46,255,0.28);
+box-shadow: 0px 0px 178px 0px rgba(171,46,255,0.28);
+background: rgba(131, 63, 186, 0.13);
+border-radius: 16px;
+border: 1px solid rgba(131, 63, 186, 0.36);
+
+}
+
+main.visualizacao-resumo {
+    grid-area: main;
+    padding: 30px;
+    margin: 0;
+    background-color: #4f0832;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 18px;
+    -webkit-box-shadow:0px 0px 178px 0px rgba(171,46,255,0.28);
+-moz-box-shadow: 0px 0px 178px 0px rgba(171,46,255,0.28);
+box-shadow: 0px 0px 178px 0px rgba(171,46,255,0.28);
+/* From https://css.glass */
+background: rgba(131, 63, 186, 0.13);
+border-radius: 16px;
+border: 1px solid rgba(131, 63, 186, 0.36);
+}
+
+/* CSS para elementos internos do resumo */
+
+.container-criar-resumo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.bt-gerar-resumo{
+    font-weight: 100;
+    font-size: 14px;
+    color: #fff;
+    background: linear-gradient(90deg, #6900cc 27%, #c500cc 100%);
+    padding: 10px 30px;
+    border: solid #5f00cc 0px;
+    box-shadow: rgb(173, 10, 255) 0px 2px 20px -4px;
+    border-radius: 9px;
+    transition : 1146ms;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    }
+
+.bt-criar-resumo,.bt-meus-resumos {
+    font-weight: 100;
+    font-size: 14px;
+    color: #000000;
+    background-color: #ffffff;
+    padding: 10px 30px;
+    border: solid #5f00cc 0px;
+    box-shadow: rgb(166, 166, 166) 0px 2px 20px -4px;
+    border-radius: 9px;
+    transition : 1146ms;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.bt-gerar-resumo:hover{
+    transition : 1146ms;
+    padding: 10px 41px;
+    transform : translateY(-4px);
+    background: linear-gradient(90deg, #6900cc 27%, #c500cc 100%);
+    color: #e5c2f2;
+    border: solid 0px #d674cb66;
+}
+
+.bt-criar-resumo:hover,
+.bt-meus-resumos:hover {
+    transition : 300ms;
+    padding: 10px 41px;
+    transform : translateY(-0px);
+    background-color: #fff;
+    color: #9c9c9c;
+    border: solid 0px #d674cb66;
+}
+
+/* Estilo para a lista de resumos */
+.lista-meus-resumos h2 {
+    color: white;
+}
+.lista-meus-resumos {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    box-sizing: border-box;
+    border: solid #db05fc 0px;
+    box-shadow: rgba(235, 63, 251, 0.322) 0px 2px 20px -4px;
+    border-radius: 9px;
+    transition : 1146ms;
+    transform: translateY(0);
+   
+}
+
+.lista-meus-resumos h2 {
+    margin-bottom: 20px;
+}
+
+.lista-meus-resumos ul {
+    list-style: none;
+    margin: 0px 0px 10px 10px;
+    padding: 4px;
+    max-height: 320px;
+    overflow-y: auto;
+}
+.lista-meus-resumos ul::-webkit-scrollbar {
+    display: none;
+}
+
+.visualizacao-resumo {
+    display: none;
+    grid-area: main;
+    padding: 50px;
+    background-color: #ff6f61;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transform: scale(0.8) translateY(-20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    
+    
+}
+
+.visualizacao-resumo.show {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    justify-content: center;
+    align-items: center;
+}
+
+.visualizacao-resumo.hide {
+    opacity: 0;
+    transform: scale(0.8) translateY(-20px);
+}
+
+.visualizacao-resumo h2 {
+    margin-top: 40px;
+}
+.visualizacao-resumo p {
+    margin-top: 20px;
+}
+
+.visualizacao-resumo button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: #000000;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.visualizacao-resumo button:hover {
+    background-color: #d7bee4;
+    transform: scale(1.1);
+}
+
+.lista-meus-resumos ul li {
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    font-size: 18px; /* Aumentar o tamanho do texto */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+ background: rgba(246, 244, 247, 0.968);
+ border-radius: 16px;
+ border: 1px solid rgba(131, 63, 186, 0.36);
+}
+
+.lista-meus-resumos ul li:hover {
+    transform: scale(1.03);
+    color: white;
+background: rgba(131, 63, 186, 0.2);
+border-radius: 16px;
+border: 1px solid rgba(131, 63, 186, 0.36);
+}
+
+.lista-meus-resumos .botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Adicionar espaçamento entre os botões */
+}
+
+.lista-meus-resumos button {
+    width: fit-content; /* Ocupar toda a largura */
+    padding: 6px 8px; /* Ajustar o tamanho dos botões */
+    border: none;
+    border-radius: 8px;
+    background-color: #702eb7;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.lista-meus-resumos button:hover {
+    background-color: #a95ec9;
+    transform: scale(1.1);
+   
+}
+
+/* Responsividade */
+@media (max-width: 767px) {
+    .container-principal {
+        grid-template-areas:
+            "header"
+            "aside"
+            "main"
+            "footer";
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto 1fr auto;
+    }
+
+    .bt-criar-resumo,
+    .bt-meus-resumos {
+        max-width: 100%;
+    }
+
+    aside.criar-resumo {
+        padding: 20px;
+        margin: 0px 55px 0px 55px;
+    }
+.lista-meus-resumos{
+  max-height: 450px;
+  overflow-y: auto;
+}
+
+    main.fazer-resumo,
+    main.visualizacao-resumo {
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    
+        
+    
+}
+
+
+.visualizacao-resumo{
+    text-align: center;
+}
+
+/* Estilo para a seção de criação de resumo */
+
+.fazer-resumo {
+    display: none; /* Estado inicial oculto */
+    transition: opacity 0.5s ease;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-items: center;
+    background-color: blueviolet;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.fazer-resumo.show {
+    display: grid; /* Ou o display que você preferir */
+    opacity: 1;
+}
+
+.fazer-resumo.hide {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.insira-titulo,
+.insira-resumo {
+    width: 80%;
+    border-radius: 10px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.insira-titulo {
+    max-width: 450px;
+    height: 44px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: larger;
+}
+
+.insira-resumo {
+    height: 300px;
+    padding: 10px;
+}
+
+.botoes-fazer-resumo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 450px;
+    margin-bottom: 20px;
+}
+.gerar-resumo{
+    width: 45%;
+    height: 52px;
+font-weight: 100;
+font-size: 14px;
+color: #fff;
+background: linear-gradient(30deg, #6900cc 27%, #c500cc 100%);
+padding: 10px 30px;
+border: solid #5f00cc 0px;
+box-shadow: rgb(173, 10, 255) 0px 2px 20px -4px;
+border-radius: 9px;
+transition : 1146ms;
+transform: translateY(0);
+display: flex;
+flex-direction: row;
+align-items: center;
+cursor: pointer;
+text-transform: uppercase;
+}
+
+.gerar-resumo:hover{
+transition : 1146ms;
+padding: 10px 41px;
+transform : translateY(-4px);
+background: linear-gradient(30deg, #6900cc 27%, #c500cc 100%);
+color: #e5c2f2;
+border: solid 0px #d674cb66;
+}
+
+
+
+.cancelar-resumo,
+.salvar-resumo {
+    width: 45%;
+    height: 52px;
+    font-weight: 100;
+    font-size: 14px;
+    color: #000000;
+    background-color: #ffffff;
+    padding: 10px 30px;
+    border: solid #5f00cc 0px;
+    box-shadow: rgba(166, 166, 166, 0.774) 0px 2px 20px -4px;
+    border-radius: 9px;
+    transition : 1146ms;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    }
+
+.cancelar-resumo:hover,
+.salvar-resumo:hover {
+transition : 1146ms;
+padding: 10px 41px;
+transform : translateY(-0px);
+background-color: #fff;
+color: #9c9c9c;
+border: solid 0px #d674cb66;
+}
+
+.cancelar-resumo:hover {
+    color: red;
+}
+
+@media (min-width: 600px) {
+    .insira-resumo {
+        height: 500px;
+    }
+
+    .botoes-fazer-resumo {
+        max-width: 600px;
+    }
+
+    .cancelar-resumo,
+    .salvar-resumo {
+        width: 150px;
+    }
+}

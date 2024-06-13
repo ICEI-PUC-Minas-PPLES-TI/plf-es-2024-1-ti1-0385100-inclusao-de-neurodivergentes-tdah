@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindStorm</title>
+    <link rel="stylesheet" href="resumos.css">
+    <script src="resumos.js" defer></script>
+</head>
+
+<body>
+    <div class="container-principal">
+        <header>
+            <img src="../logo (1).png" alt="logo" width="80px">
+            <nav>
+                <ul id="lista-principal">
+                    <li><a href="#">LOGIN</a></li>
+                    <li><a href="#">RESUMOS</a></li>
+                    <li><a href="#">TAREFAS</a></li>
+                    <li><a href="#">ESTUDOS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="grid-principal">
+            <aside class="criar-resumo">
+                <div class="container-criar-resumo">
+                    <button id="bt-gerar-resumo" class="bt-gerar-resumo">GERAR RESUMO COM IA</button>
+                    <button class="bt-criar-resumo" onclick="toggleResumo()">CRIAR RESUMO</button>
+                    <button id="meus-resumos" class="bt-meus-resumos">MEUS RESUMOS</button>
+                    <div id="lista-meus-resumos" class="lista-meus-resumos" style="display: none;">
+                        <h2>Meus Resumos</h2>
+                        <ul id="lista-titulos"></ul>
+                    </div>
+                </div>
+            </aside>
+            <main class="fazer-resumo" id="fazer-resumo">
+                <input type="text" placeholder="Insira o Título ou Tema" class="insira-titulo">
+                <textarea name="resumo" id="resumo-textarea" placeholder="Insira o Resumo" class="insira-resumo"></textarea>
+                <div class="botoes-fazer-resumo">
+                    <button class="cancelar-resumo" onclick="toggleResumo()">CANCELAR</button>
+                    <button class="gerar-resumo" onclick="mostrarCarregando()">GERAR</button>
+                    <button class="salvar-resumo" style="display:none;">SALVAR RESUMO</button>
+                </div>
+               
+                <div id="loading" style="display:none;">Gerando resumo, por favor aguarde...</div>
+            </main>
+            <main class="visualizacao-resumo" id="visualizacao-resumo">
+                <div class="card">
+                    <p>Oi Arlindo</p>
+                </div>
+            </main>
+        </div>
+        <footer>
+            <p><span class="destaque">MindStorm</span> &copy; 2024</p>
+        </footer>
+    </div>
+
+    <script src="openai.js"></script>
+</body>
+</html>
