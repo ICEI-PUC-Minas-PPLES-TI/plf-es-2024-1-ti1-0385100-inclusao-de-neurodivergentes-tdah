@@ -1,11 +1,15 @@
 const taskLists = [document.getElementById("taskList4")];
 const taskInputs = [document.getElementById("taskInput4")];
+const titleInputs = [document.getElementById("taskTitleInput4")];
 
 function saveTasks() {
   const tasks = taskLists.map((list) => {
-    return Array.from(list.children).map(
-      (item) => item.querySelector("span").textContent
-    );
+    return Array.from(list.children).map((item) => {
+      return {
+        title: item.querySelector(".taskTitle").textContent,
+        content: item.querySelector(".taskContent").textContent
+      };
+    });
   });
   localStorage.setItem("tasks", JSON.stringify(tasks));
 }
@@ -14,14 +18,14 @@ function loadTasks() {
   const savedTasks = JSON.parse(localStorage.getItem("tasks"));
   if (savedTasks) {
     savedTasks.forEach((tasks, index) => {
-      tasks.forEach((taskText) => {
+      tasks.forEach((task) => {
         const li = document.createElement("li");
         li.innerHTML = `
-                    <span>${taskText}</span>
-                    
-                    <button class="editButton" onClick="editTask(this)">Editar</button>
-                    <button class="deleteButton" onClick="deleteTask(this, ${index})">Remover</button>
-                `;
+          <span class="taskTitle">${task.title}</span>
+          <span class="taskContent">${task.content}</span>
+          <button class="editButton" onClick="editTask(this)">Editar</button>
+          <button class="deleteButton" onClick="deleteTask(this, ${index})">Remover</button>
+        `;
         taskLists[index].appendChild(li);
       });
     });
@@ -30,16 +34,19 @@ function loadTasks() {
 
 function addTask() {
   taskInputs.forEach((input, index) => {
+    const taskTitle = titleInputs[index].value.trim();
     const taskText = input.value.trim();
-    if (taskText !== "") {
+    if (taskTitle !== "" && taskText !== "") {
       const maxText = taskText.substring(0, 35);
       const li = document.createElement("li");
       li.innerHTML = `
-                <span>${maxText}</span>
-                <button class="editButton" onClick="editTask(this)">Editar</button>
-                <button class="deleteButton" onClick="deleteTask(this, ${index})">Remover</button>
-            `;
+        <span class="taskTitle">${taskTitle}</span>
+        <span class="taskContent">${maxText}</span>
+        <button class="editButton" onClick="editTask(this)">Editar</button>
+        <button class="deleteButton" onClick="deleteTask(this, ${index})">Remover</button>
+      `;
       taskLists[index].appendChild(li);
+      titleInputs[index].value = "";
       input.value = "";
       saveTasks();
     }
@@ -48,10 +55,13 @@ function addTask() {
 
 function editTask(button) {
   const li = button.parentElement;
-  const span = li.querySelector("span");
-  const newText = prompt("Editar tarefa: ", span.textContent);
-  if (newText !== null && newText.trim() !== "") {
-    span.textContent = newText.trim();
+  const titleSpan = li.querySelector(".taskTitle");
+  const contentSpan = li.querySelector(".taskContent");
+  const newTitle = prompt("Editar título: ", titleSpan.textContent);
+  const newText = prompt("Editar tarefa: ", contentSpan.textContent);
+  if (newTitle !== null && newTitle.trim() !== "" && newText !== null && newText.trim() !== "") {
+    titleSpan.textContent = newTitle.trim();
+    contentSpan.textContent = newText.trim();
     saveTasks();
   }
 }
