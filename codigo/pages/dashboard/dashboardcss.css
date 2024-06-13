@@ -3,7 +3,7 @@
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: #161616;
+  background-color: #280a33;
 }
 
 li {
@@ -24,7 +24,7 @@ header>img {
 
 nav {
   grid-area: nav;
-  background-color: #ecea77;
+  background-color: #280a33;
   color: white;
 }
 
@@ -75,7 +75,7 @@ p {
 .resumo-card {
   width: calc(25% - 20px);
   padding: 20px;
-  background-color: #ecea79;
+  background-color: #4f0832;
   border-radius: 5px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
@@ -85,7 +85,7 @@ p {
 .agenda-card {
   width: calc(25% - 20px);
   padding: 20px;
-  background-color: #ecea79;
+  background-color: #4f0832;
   border-radius: 5px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
@@ -95,7 +95,7 @@ p {
 .estudo-card {
   width: calc(25% - 20px);
   padding: 20px;
-  background-color: #ecea79;
+  background-color: #4f0832;
   border-radius: 5px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
@@ -105,7 +105,7 @@ p {
 .creditos-card {
   width: calc(25% - 20px);
   padding: 20px;
-  background-color: #ecea79;
+  background-color: #4f0832;
   border-radius: 5px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
@@ -130,6 +130,7 @@ footer {
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
 }
+
 
 button.card {
   background-color: #ffffff;
@@ -177,14 +178,14 @@ button:active {
   position: absolute; 
   top: 100%; 
   left: 0; 
-  background-color: #292828;
+  background-color: #280a33;
   min-width: 200px;
   border-radius: 4px;
   z-index: 1; 
 }
 
 .dropdown-child a {
-  color: #ecea79;
+  color: #ffffff;
   padding: 20px;
   text-decoration: none;
   display: block; 
