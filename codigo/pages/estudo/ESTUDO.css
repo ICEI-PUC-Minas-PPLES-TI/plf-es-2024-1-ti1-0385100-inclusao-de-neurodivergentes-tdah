@@ -162,6 +162,7 @@ input[type="submit"]:hover {
 .FAVORITOS h1 {
   margin-bottom: 20px;
 }
+#taskTitleInput4,
 #taskInput4 {
   width: 100%;
   padding: 10px;
@@ -213,7 +214,13 @@ input[type="submit"]:hover {
 
 /* java script */
 
-li span {
+li .taskTitle {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+li .taskContent {
   display: block;
   margin-bottom: 13px;
   font-size: 75%;

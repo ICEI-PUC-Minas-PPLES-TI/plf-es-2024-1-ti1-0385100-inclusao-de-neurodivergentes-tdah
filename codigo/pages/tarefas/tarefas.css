@@ -102,6 +102,8 @@ footer {
     gap: 20px;
     align-items: center;
     width: 30%;
+    margin-bottom: 30px;
+    
 }
 
 .wraper ul {
