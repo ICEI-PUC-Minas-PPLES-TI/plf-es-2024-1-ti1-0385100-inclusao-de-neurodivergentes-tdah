@@ -327,9 +327,33 @@ footer {
     cursor: pointer;
     color: white;
     font-size: 12px;
-    background-color: #e00a2a;
+    background-color: var(--color-red);
     padding: 10px;
     border-radius: 15px;
+}
+
+.btn-remove:hover, 
+.btn-clear:hover{
+    background-color: var(--color-red2);
+    transition: 0.5s;
+}
+
+.btn-edit{
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 12px;
+    background-color: #fe5252;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.btn-edit:hover{
+    background-color: #f61919;
+    transition: 0.3s ease-in-out;
 }
 
 /* Corrigido o seletor para incluir 'px' */
