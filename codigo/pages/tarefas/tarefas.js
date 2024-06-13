@@ -96,107 +96,113 @@ function editItem(taskName) {
 
 showValues();
 
-//GRAFICO
 let estudoDiario = JSON.parse(localStorage.getItem('estudoDiario')) || {};
 let chart = null;
 
 document.getElementById('estudoForm').addEventListener('submit', function(event) {
-  event.preventDefault();
+    event.preventDefault();
 
-  const materia = document.getElementById('materia').value.trim().toLowerCase();
-  const horas = parseInt(document.getElementById('horas').value);
+    const materia = document.getElementById('materia').value.trim().toLowerCase();
+    const horas = parseInt(document.getElementById('horas').value);
 
-  // Inicializar array para a matéria se não existir
-  if (!estudoDiario[materia]) {
-    estudoDiario[materia] = [];
-  }
+    if (!estudoDiario[materia]) {
+        estudoDiario[materia] = [];
+    }
 
-  // Adicionar as horas ao array da matéria correspondente
-  estudoDiario[materia].push(horas);
+    estudoDiario[materia].push(horas);
 
-  // Armazenar de volta no localStorage
-  localStorage.setItem('estudoDiario', JSON.stringify(estudoDiario));
+    localStorage.setItem('estudoDiario', JSON.stringify(estudoDiario));
 
-  // Atualizar gráfico e lista de matérias
-  atualizarGrafico(estudoDiario);
-  atualizarListaMaterias(estudoDiario);
+    atualizarGrafico(estudoDiario);
+    atualizarListaMaterias(estudoDiario);
 });
 
 function atualizarGrafico(estudoDiario) {
-  const ctx = document.getElementById('grafico').getContext('2d');
+    const ctx = document.getElementById('grafico').getContext('2d');
 
-  // Obter nomes das matérias e somas das horas
-  const materias = Object.keys(estudoDiario);
-  const horasEstudo = materias.map(materia => estudoDiario[materia].reduce((a, b) => a + b, 0));
+    const materias = Object.keys(estudoDiario);
+    const horasEstudo = materias.map(materia => estudoDiario[materia].reduce((a, b) => a + b, 0));
 
-  // Se já houver um gráfico, destrua-o antes de criar um novo
-  if (chart) {
-    chart.destroy();
-  }
-
-  // Dados do gráfico
-  const data = {
-    labels: materias,
-    datasets: [{
-      label: 'Horas de Estudo',
-      data: horasEstudo,
-      backgroundColor: '#f79494',
-      borderColor: 'black',
-      borderWidth: 1
-    }]
-  };
-
-  // Configurações do gráfico
-  const config = {
-    type: 'bar',
-    data: data,
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
+    if (chart) {
+        chart.destroy();
     }
-  };
 
-  // Renderizar gráfico
-  chart = new Chart(ctx, config);
+    const data = {
+        labels: materias,
+        datasets: [{
+            label: 'Horas de Estudo',
+            data: horasEstudo,
+            backgroundColor: '#f79494',
+            borderColor: 'black',
+            borderWidth: 1
+        }]
+    };
+
+    const config = {
+        type: 'bar',
+        data: data,
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    };
+
+    chart = new Chart(ctx, config);
 }
 
 function atualizarListaMaterias(estudoDiario) {
-  const materiaList = document.getElementById('materiaList');
-  materiaList.innerHTML = '';
+    const materiaList = document.getElementById('materiaList');
+    materiaList.innerHTML = '';
 
-  for (let materia in estudoDiario) {
-    const listItem = document.createElement('li');
-    listItem.textContent = `${materia} - ${estudoDiario[materia].reduce((a, b) => a + b, 0)} horas`;
-    const removeButton = document.createElement('button');
-    removeButton.textContent = 'Remover';
-    removeButton.className = 'btn-remove';
-    removeButton.onclick = () => removerMateria(materia);
+    for (let materia in estudoDiario) {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${materia} - ${estudoDiario[materia].reduce((a, b) => a + b, 0)} horas`;
 
-    listItem.appendChild(removeButton);
-    materiaList.appendChild(listItem);
-  }
+        const removeButton = document.createElement('button');
+        removeButton.textContent = 'Remover';
+        removeButton.className = 'btn-remove';
+        removeButton.onclick = () => removerMateria(materia);
+
+        const editButton = document.createElement('button');
+        editButton.textContent = 'Editar';
+        editButton.className = 'btn-edit';
+        editButton.onclick = () => editarMateria(materia);
+
+        listItem.appendChild(removeButton);
+        listItem.appendChild(editButton);
+        materiaList.appendChild(listItem);
+    }
+}
+
+function editarMateria(materia) {
+    const novasHoras = prompt(`Editar horas para ${materia}:`, estudoDiario[materia].reduce((a, b) => a + b, 0));
+    if (novasHoras !== null) {
+        estudoDiario[materia] = [parseInt(novasHoras)];
+        localStorage.setItem('estudoDiario', JSON.stringify(estudoDiario));
+        atualizarGrafico(estudoDiario);
+        atualizarListaMaterias(estudoDiario);
+    }
 }
 
 function removerMateria(materia) {
-  delete estudoDiario[materia];
-  localStorage.setItem('estudoDiario', JSON.stringify(estudoDiario));
-  atualizarGrafico(estudoDiario);
-  atualizarListaMaterias(estudoDiario);
+    delete estudoDiario[materia];
+    localStorage.setItem('estudoDiario', JSON.stringify(estudoDiario));
+    atualizarGrafico(estudoDiario);
+    atualizarListaMaterias(estudoDiario);
 }
 
 function removerTudo() {
-  estudoDiario = {};
-  localStorage.setItem('estudoDiario', JSON.stringify(estudoDiario));
-  atualizarGrafico(estudoDiario);
-  atualizarListaMaterias(estudoDiario);
+    estudoDiario = {};
+    localStorage.setItem('estudoDiario', JSON.stringify(estudoDiario));
+    atualizarGrafico(estudoDiario);
+    atualizarListaMaterias(estudoDiario);
 }
 
-// Inicializar gráfico e lista de matérias com dados do localStorage
 document.addEventListener('DOMContentLoaded', () => {
-  estudoDiario = JSON.parse(localStorage.getItem('estudoDiario')) || {};
-  atualizarGrafico(estudoDiario);
-  atualizarListaMaterias(estudoDiario);
+    estudoDiario = JSON.parse(localStorage.getItem('estudoDiario')) || {};
+    atualizarGrafico(estudoDiario);
+    atualizarListaMaterias(estudoDiario);
 });
