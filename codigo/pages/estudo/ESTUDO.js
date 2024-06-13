@@ -7,7 +7,7 @@ function saveTasks() {
     return Array.from(list.children).map((item) => {
       return {
         title: item.querySelector(".taskTitle").textContent,
-        content: item.querySelector(".taskContent").textContent
+        content: item.querySelector(".taskContent").textContent,
       };
     });
   });
@@ -59,7 +59,12 @@ function editTask(button) {
   const contentSpan = li.querySelector(".taskContent");
   const newTitle = prompt("Editar título: ", titleSpan.textContent);
   const newText = prompt("Editar tarefa: ", contentSpan.textContent);
-  if (newTitle !== null && newTitle.trim() !== "" && newText !== null && newText.trim() !== "") {
+  if (
+    newTitle !== null &&
+    newTitle.trim() !== "" &&
+    newText !== null &&
+    newText.trim() !== ""
+  ) {
     titleSpan.textContent = newTitle.trim();
     contentSpan.textContent = newText.trim();
     saveTasks();
