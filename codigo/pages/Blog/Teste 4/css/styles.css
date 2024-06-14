@@ -178,20 +178,21 @@ nav li>a {
 .btn-read-more {
     display: inline-block;
     padding: 10px 20px;
-    background: linear-gradient(90deg, #6900cc 27%, #c500cc 100%);    box-shadow: rgb(173, 10, 255) 0px 2px 20px -4px;    
+    background: linear-gradient(90deg, #6900cc 27%, #c500cc 100%);
+    box-shadow: rgb(173, 10, 255) 0px 2px 20px -4px;
     color: #FFF;
     font-size: 12px;
     text-decoration: none;
     border-radius: 9px;
-    transition : 1146ms;
+    transition: 1146ms;
     border: solid #5f00cc 0px;
-        margin-top: 53%;
+    margin-top: 53%;
     /* Garante que o botão fique no final do card */
     align-self: center;
     /* Alinha o botão no centro horizontal */
     position: absolute;
     /* Absoluto dentro do card-content */
-    
+
 }
 
 .btn-read-more:hover {
@@ -267,6 +268,27 @@ footer {
     margin-top: 40px;
 }
 
+@media (max-width: 1200px) {
+    .container {
+        max-width: 1000px; /* Ajusta a largura máxima */
+    }
+    .card-wrapper {
+        width: 960px; /* Ajusta a largura do contêiner dos cards */
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        max-width: 960px; /* Ajusta a largura máxima */
+    }
+    .card-wrapper {
+        width: 900px; /* Ajusta a largura do contêiner dos cards */
+    }
+    .card {
+        width: 280px; /* Ajusta a largura dos cards */
+    }
+}
+
 @media screen and (max-width: 768px) {
     .slide-content {
         margin: 0 10px;
@@ -274,5 +296,90 @@ footer {
 
     .swiper-navBtn {
         display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        /* Alinha os elementos do cabeçalho em coluna */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        /* Alinha os links de navegação em coluna */
+    }
+
+
+    #lista-principal {
+        justify-content: center;
+        margin-left: 6px;
+    }
+
+    .card-wrapper {
+        width: 720px;
+        /* Ajusta a largura do contêiner dos cards */
+        height: auto;
+        /* Ajusta a altura do contêiner dos cards */
+    }
+
+    .card {
+        width: 240px;
+        /* Ajusta a largura dos cards */
+        height: auto;
+        /* Ajusta a altura dos cards */
+        margin: 10px auto;
+        /* Centraliza os cards com margem automática */
+    }
+
+    .btn-read-more {
+        margin-top: 20px;
+        /* Ajusta a margem superior do botão */
+        position: static;
+        /* Define a posição estática do botão */
+        align-self: center;
+        /* Alinha o botão no centro */
+    }
+
+    .btn-prev,
+    .btn-next {
+        display: none;
+        /* Esconde os botões de navegação */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 0;
+        /* Ajusta o padding do contêiner */
+    }
+
+    .card-wrapper {
+        width: 100%;
+        /* Ajusta a largura do contêiner dos cards */
+        flex-direction: column;
+        /* Alinha os cards em coluna */
+    }
+
+    .card {
+        width: 90%;
+        /* Ajusta a largura dos cards */
+        margin: 10px auto;
+        /* Centraliza os cards com margem automática */
+    }
+
+    .card-content {
+        padding: 10px;
+        /* Ajusta o padding do conteúdo do card */
+    }
+
+    .card-title {
+        font-size: 20px;
+        /* Ajusta o tamanho da fonte do título */
+    }
+
+    .card-text {
+        font-size: 12px;
+        /* Ajusta o tamanho da fonte do texto */
     }
 }
