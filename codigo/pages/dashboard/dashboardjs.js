@@ -1,6 +1,58 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var buttons = document.querySelectorAll('button');
+    // Código para a página de login
+    if (document.getElementById('loginForm')) {
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
 
+            fetch('/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username, password })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    localStorage.setItem('userId', data.userId);
+                    window.location.href = 'perfil.html';
+                } else {
+                    alert('Falha no login: ' + data.message);
+                }
+            });
+        });
+    }
+
+    // Código para a página de perfil
+    if (document.getElementById('logoutButton')) {
+        const userId = localStorage.getItem('userId');
+        if (userId) {
+            fetch(`/perfil/${userId}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        document.getElementById('username').textContent = data.user.nome_usuario;
+                        document.getElementById('email').textContent = data.user.email;
+                    } else {
+                        document.getElementById('user-info').style.display = 'none';
+                        document.getElementById('not-logged-in').style.display = 'block';
+                    }
+                });
+        } else {
+            document.getElementById('user-info').style.display = 'none';
+            document.getElementById('not-logged-in').style.display = 'block';
+        }
+
+        document.getElementById('logoutButton').addEventListener('click', function() {
+            localStorage.removeItem('userId');
+            window.location.href = 'index.html';
+        });
+    }
+
+    // Código para animação de botão
+    var buttons = document.querySelectorAll('button');
     buttons.forEach(function(button) {
         button.addEventListener('click', function() {
             animateButton(button);
@@ -18,68 +70,4 @@ document.addEventListener('DOMContentLoaded', function() {
             button.style.transform = 'scale(1)';
         }, 300);
     }
-});
-const express = require('express');
-const bodyParser = require('body-parser');
-const app = express();
-const port = 3000;
-
-// Dados de login simulados
-const logins = [
-    { id: 1, nome_usuario: 'Arthur Pazzutti', senha: 'senha123', email: 'arthur.pazzutti@sga.pucminas.br' },
-    { id: 2, nome_usuario: 'Arlindo Junior', senha: 'senha456', email: 'maria.souza@example.com' },
-    { id: 3, nome_usuario: 'Joaquim Vilela', senha: 'senha789', email: 'carlos.pereira@example.com' },
-    { id: 4, nome_usuario: 'Vinicius Sena', senha: 'senha100', email: 'carlos.pereira@example.com' },
-    { id: 5, nome_usuario: 'Gabriel Lima', senha: 'senha200', email: 'carlos.pereira@example.com' },
-];
-
-app.use(bodyParser.json());
-app.use(express.static('public'));
-
-app.post('/login', (req, res) => {
-    const { username, password } = req.body;
-    const user = logins.find(u => u.nome_usuario === username && u.senha === password);
-
-    if (user) {
-        res.json({ success: true, userId: user.id });
-    } else {
-        res.json({ success: false, message: 'Nome de usuário ou senha incorretos.' });
-    }
-});
-
-app.get('/perfil/:id', (req, res) => {
-    const userId = parseInt(req.params.id, 10);
-    const user = logins.find(u => u.id === userId);
-
-    if (user) {
-        res.json({ success: true, user });
-    } else {
-        res.json({ success: false, message: 'Usuário não encontrado.' });
-    }
-});
-
-app.listen(port, () => {
-    console.log(`Servidor rodando em http://localhost:${port}`);
-});
-document.addEventListener('DOMContentLoaded', function() {
-    const userId = localStorage.getItem('userId');
-    if (userId) {
-        fetch(`/perfil/${userId}`)
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    document.getElementById('username').textContent = data.user.nome_usuario;
-                    document.getElementById('email').textContent = data.user.email;
-                } else {
-                    alert('Erro ao carregar perfil: ' + data.message);
-                }
-            });
-    } else {
-        alert('Usuário não logado.');
-        window.location.href = 'index.html';
-    }
-});
-document.getElementById('logoutButton').addEventListener('click', function() {
-    localStorage.removeItem('userId');
-    window.location.href = 'index.html';
 });
