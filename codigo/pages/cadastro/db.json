@@ -1,0 +1,15 @@
+{
+  "clientes": [
+    {
+      "id": "8a75",
+      "nome": "lala",
+      "email": "lalareis@gmail.com"
+    },
+    {
+      "id": "0a12",
+      "nome": "Arlindo",
+      "email": "arlindosergio317@gmail.com",
+      "senha": "jr123546"
+    }
+  ]
+}
