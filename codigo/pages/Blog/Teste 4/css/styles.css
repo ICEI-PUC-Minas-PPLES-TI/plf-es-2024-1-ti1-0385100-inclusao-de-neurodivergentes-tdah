@@ -11,12 +11,12 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #280a33;
+  background-color: #07041e;
     width: 100%;
 }
 
 header {
-    background-color: transparent;
+    background-color: #07041e;
     justify-content: space-between;
     align-items: center;
     padding: 10px 60px;
@@ -26,7 +26,7 @@ header {
 
 
 header img {
-    background-color: transparent;
+    background-color: #07041e;
     width: 100px;
     /* Ajuste conforme o tamanho da sua logo */
     height: auto;
@@ -34,7 +34,7 @@ header img {
 }
 
 nav {
-    background-color: #280a33;
+    background-color: #07041e;
     color: white;
     flex: 1;
     /* Ocupa o espaço restante */
@@ -52,7 +52,13 @@ nav {
 #lista-principal>li {
     list-style: none;
     margin-right: 10px;
-    padding: 5px;
+    padding: 10px;
+    border-radius: 5px;
+     transition: background-color 0.2s, transform 0.2s;
+}
+
+#lista-principal > li:hover {
+  background-color: #522f43;
 }
 
 nav li>a {
@@ -265,7 +271,7 @@ footer {
     justify-content: center;
     padding: 15px;
     color: white;
-    margin-top: 40px;
+    margin-top: 130px;
 }
 
 @media (max-width: 1200px) {
