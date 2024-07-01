@@ -333,9 +333,7 @@ footer {
 
     .card-wrapper {
         width: 720px;
-        /* Ajusta a largura do contêiner dos cards */
         height: auto;
-        /* Ajusta a altura do contêiner dos cards */
     }
 
     .card {
