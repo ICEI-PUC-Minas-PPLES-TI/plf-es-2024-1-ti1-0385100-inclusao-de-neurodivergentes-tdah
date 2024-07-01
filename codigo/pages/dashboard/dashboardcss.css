@@ -3,7 +3,7 @@
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: #280a33;
+  background-color: #07041e;
 }
 
 li {
@@ -12,7 +12,7 @@ li {
 
 header {
   grid-area: header;
-  background-color: #280a33;
+  background-color: #07041e;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,31 +75,37 @@ p {
 .resumo-card {
   width: calc(25% - 20px);
   padding: 20px;
-  background-color: #4f0832;
-  border-radius: 5px;
+  background-color: #280a33;
+  border-radius: 10px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
   transition: box-shadow 0.3s;
+  border: 2px solid white;
+  color: white;
 }
 
 .agenda-card {
   width: calc(25% - 20px);
   padding: 20px;
-  background-color: #4f0832;
-  border-radius: 5px;
+  background-color: #280a33;
+  border-radius: 10px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
   transition: box-shadow 0.3s;
+  border: 2px solid white;
+  color: white;
 }
 
 .estudo-card {
   width: calc(25% - 20px);
   padding: 20px;
-  background-color: #4f0832;
-  border-radius: 5px;
+  background-color: #280a33;
+  border-radius: 10px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
   transition: box-shadow 0.3s;
+  border: 2px solid white;
+  color: white;
 }
 
 .creditos-card {
@@ -114,11 +120,12 @@ p {
 
 footer {
   grid-area: footer;
-  background-color: #280a33;
+  background-color: #07041e;
   align-items: center;
   display: flex;
   justify-content: center;
   padding: 15px;
+  color: white;
 }
 
 .container-principal {
@@ -133,18 +140,17 @@ footer {
 
 
 button.card {
-  background-color: #ffffff;
-  color: #000000;
-  border-radius: 5px;
+  background-color: #4f0832;
+  color: white;
+  border-radius: 10px;
   padding: 10px 20px;
   font-size: 16px;
-  box-shadow: 0 4px #161616;
-  transition: background-color 0.3s, transform 0.3s;
+  transition: background-color 0.2s, transform 0.2s;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #555555;
+  background-color: #522f43;
 }
 
 button:active {

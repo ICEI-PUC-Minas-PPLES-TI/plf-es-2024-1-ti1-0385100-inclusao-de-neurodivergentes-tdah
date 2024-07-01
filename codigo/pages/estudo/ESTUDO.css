@@ -42,6 +42,7 @@ nav {
   margin-right: 10px;
   padding: 10px;
   border-radius: 5px;
+  transition: background-color 0.2s, transform 0.2s;
   
 }
 #lista-principal > li:hover {
@@ -131,6 +132,7 @@ input[type="submit"] {
   border-radius: 10px;
   cursor: pointer;
   border: 2px solid #161616;
+  transition: background-color 0.2s, transform 0.2s;
 }
 input[type="submit"]:hover {
   background-color: #522f43;
@@ -181,6 +183,7 @@ input[type="submit"]:hover {
   border-radius: 10px;
   margin: 0px 0px 10px;
   width: 100%;
+  transition: background-color 0.2s, transform 0.2s;
 }
 .editButton,
 .deleteButton {
@@ -192,6 +195,7 @@ input[type="submit"]:hover {
   border-radius: 10px;
   margin: 5px;
   border: 2px solid white;
+  transition: background-color 0.2s, transform 0.2s;
 }
 .FAVORITOS ul {
   list-style-type: none;
