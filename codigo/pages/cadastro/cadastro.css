@@ -13,7 +13,7 @@
 .tela-login{
     width: 100vw;
     height: 100vh;
-    background-color: #191919;
+    background-color: #07041e;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,7 +45,7 @@ input:hover{
 }
 
 .card{
-    background-color: #2c2739;
+    background-color: #280a33;
     padding: 30px;
     border-radius: 20px;
     display: flex;
@@ -54,17 +54,18 @@ input:hover{
     flex-direction: column;
     box-shadow: 0px 10px 40px #00000056;
     width: 20%;
+    border: 3px solid white;
 }
 h1{
-    color: #00ff88;
+    color: #fff;
     font-weight: 600;
     font-size: 1.5rem;
     margin-bottom: 30px;
 }
 
 .btn-login{
-    background-color: #00ff88;
-    color: #201b2c;
+    background-color: #411252;
+    color: #fff;
     width: 100%;
     padding: 15px;
     font-size: 12px;
@@ -74,12 +75,12 @@ h1{
     border-radius: 10px;
     outline: none;
     border: none;
-    box-shadow: 0px 0px 10px 2px #356f54;
+    box-shadow: 0px 10px 30px #00000056;
     cursor: pointer;
 }
 
 .btn-login:hover{
-    background-color: #45be86;
+    background-color: #641d7e;
     transition: all .4s ease-out;
 }
 
