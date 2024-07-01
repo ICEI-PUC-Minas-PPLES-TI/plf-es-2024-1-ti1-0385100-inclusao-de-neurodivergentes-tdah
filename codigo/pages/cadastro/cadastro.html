@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindStorm</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+    <div class="tela-login">
+        <div class="card">
+            <h1>CADASTRO DE USUÁRIO</h1>
+            <form class="textfield" id="form">
+                <label for="nome">Usuário</label>
+                <input type="text" name="usuario" placeholder="Usuário" id="nome" required>
+                <label for="email">E-mail</label>
+                <input type="email" name="email" placeholder="E-mail" id="email" required>
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" placeholder="Senha" id="senha" required>
+                <button class="btn-login" type="submit">CADASTRAR</button>
+            </form>
+        </div>
+    </div>
+     
+    <script>
+    document.getElementById('form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const nome = document.getElementById('nome').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const senha = document.getElementById('senha').value.trim();
+
+        // Validação simples para verificar se os campos não estão vazios
+        if (nome === "" || email === "" || senha === "") {
+            alert('Por favor, preencha todos os campos.');
+            return;
+        }
+
+        // Verifica se já existe um cliente com o mesmo nome e email
+        fetch('http://localhost:3000/clientes')
+            .then(response => response.json())
+            .then(clientes => {
+                const clienteExistente = clientes.find(cliente => cliente.nome === nome && cliente.email === email);
+                if (clienteExistente) {
+                    alert('Já existe um cliente com o mesmo nome e email.');
+                    return;
+                }
+
+                // Se não existir cliente com o mesmo nome e email, faz a requisição para criar um novo cliente
+                fetch('http://localhost:3000/clientes', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        nome: nome,
+                        email: email,
+                        senha: senha
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Cliente cadastrado:', data);
+                    alert('Cliente cadastrado com sucesso!');
+                    console.log('Redirecionando para ../dashbord/dashbord.html');
+                    window.location.href = '../dashbord/dashbord.html';  // Redireciona para a página incial 
+                })
+                .catch(error => {
+                    console.error('Erro:', error);
+                    alert('Erro ao cadastrar cliente.');
+                });
+            })
+            .catch(error => {
+                console.error('Erro ao buscar clientes existentes:', error);
+                alert('Erro ao verificar clientes existentes.');
+            });
+    });
+    </script>
+</body>
+</html>
