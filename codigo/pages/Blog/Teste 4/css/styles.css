@@ -66,6 +66,10 @@ nav li>a {
     text-decoration: none;
 }
 
+.blog{
+    margin-top: -10px;
+}
+
 .title-container {
     text-align: center;
     margin-top: 30px;
@@ -271,7 +275,7 @@ footer {
     justify-content: center;
     padding: 15px;
     color: white;
-    margin-top: 130px;
+    margin-top: 30px;
 }
 
 @media (max-width: 1200px) {
@@ -309,6 +313,11 @@ footer {
     header {
         flex-direction: column;
         /* Alinha os elementos do cabeçalho em coluna */
+    }
+
+    .blog {
+        padding: 20px 0;
+        /* Ajusta o padding do contêiner */
     }
 
     .nav-links {
