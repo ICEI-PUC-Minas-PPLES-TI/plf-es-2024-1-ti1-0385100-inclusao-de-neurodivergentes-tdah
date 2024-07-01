@@ -44,8 +44,13 @@ nav {
 #lista-principal > li {
     list-style: none;
     margin-right: 10px;
-    padding: 5px;
-}
+    padding: 10px;
+    border-radius: 5px;
+    
+  }
+
+#lista-principal > li:hover {
+    background-color: #522f43;}
 
 nav li > a {
     color: #FFF;
@@ -112,10 +117,7 @@ footer {
     padding: 0;
 }
 
-#agenda {
-    background-color: #af0832;
-    border-radius: 10px;
-}
+
 
 .wraper li {
     padding: 10px;
