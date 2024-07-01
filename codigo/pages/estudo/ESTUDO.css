@@ -27,10 +27,7 @@ header > img {
   justify-content: start;
 }
 
-header .pagina-estudos {
-  background-color: #4f0832;
-  border-radius: 10px;
-}
+
 nav {
   grid-area: nav;
   background-color: #07041e;
@@ -43,7 +40,12 @@ nav {
 #lista-principal > li {
   list-style: none;
   margin-right: 10px;
-  padding: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  
+}
+#lista-principal > li:hover {
+  background-color: #522f43;
 }
 nav li > a {
   color: white;

@@ -1,15 +1,15 @@
 header {
     grid-area: header;
-    background-color: #ecea77;
+    background-color: #280a33;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 main {
     grid-area: main;
+    background-color: #07041e;
     justify-content: center;
     align-items: center;
-    text-align: center;
     padding: 20px;
     background-image: url(logo.png);
     background-repeat: no-repeat;
@@ -20,7 +20,7 @@ main {
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: #161616;
+    background-color: #280a33;
 
 }
 
@@ -29,11 +29,11 @@ header>img {
 }
 
 .perfil-card {
-  
+  block-size: 150px;
   display: flex;
   width: calc(25% - 20px); 
   padding: 20px;
-  background-color: #ecea79;
+  background-color: #4f0832;
   border-radius: 5px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s;
@@ -41,20 +41,29 @@ header>img {
   align-items: center;
   max-width: 350px; 
   margin: 0 auto;
+  color: #ffffff;
+  
+}
+.perfil-card>ul{
+  text-align: left;
+  margin-bottom: -50px;
+  justify-content: left;
+  
 }
 
   .perfil-card>img{
     align-items: center;
+    filter: drop-shadow(5px 5px 15px rgb(255, 255, 255));
     display: block;
     position: absolute;
     text-align: center;
     font-weight: bold;
     margin-bottom: 20px;
-    margin-top: -80px;
+    margin-top: -50px;
   }
   footer {
     grid-area: footer;
-    background-color: #ecea77;
+    background-color: #280a33;
     align-items: center;
     display: flex;
     justify-content: center;

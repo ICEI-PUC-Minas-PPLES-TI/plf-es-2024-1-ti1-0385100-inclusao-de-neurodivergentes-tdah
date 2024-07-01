@@ -18,11 +18,16 @@
     <div class="container-principal">
         <main>
             <div class="perfil-card">
-                <img src="user.png" alt="user" width="80px"><br><br><br><br><br><br>
-                Conta: (nome do usuario) <br><br><br><br>
-                Email: (email do usuario)<br><br>
-
-
+                
+                <img src="user.png" alt="user" width="80px">
+            
+                <ul>Conta: <span id="username"></span></ul>
+                
+                <ul>Email: <span id="email"></span></ul>
+                <div id="not-logged-in" style="display: none;">
+                    Usuário não logado
+                </div>
+                
 
 
             </div>
@@ -33,5 +38,6 @@
         </footer>
     </div>
 </body>
+<script src="dashboardjs.js"></script>
 
 </html>
