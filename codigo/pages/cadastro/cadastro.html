@@ -16,13 +16,28 @@
                 <label for="email">E-mail</label>
                 <input type="email" name="email" placeholder="E-mail" id="email" required>
                 <label for="senha">Senha</label>
-                <input type="password" name="senha" placeholder="Senha" id="senha" required>
+
+                <div class="password-container">
+                    <input type="password" id="password" class="textfield" placeholder="Senha">
+                    <span class="toggle-password" id="toggle-password">&#128065;</span>
+                </div>
+
+
                 <button class="btn-login" type="submit">CADASTRAR</button>
             </form>
         </div>
     </div>
      
     <script>
+        document.getElementById('toggle-password').addEventListener('click', function () {
+    const passwordField = document.getElementById('password');
+    const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordField.setAttribute('type', type);
+
+    // Muda o ícone entre o olho aberto e fechado
+    this.textContent = type === 'password' ? '\u{1F441}' : '\u{1F441}\u{FE0E}'; // Olho com barra (fechado) e olho (aberto)
+});
+
     document.getElementById('form').addEventListener('submit', function(event) {
         event.preventDefault();
 

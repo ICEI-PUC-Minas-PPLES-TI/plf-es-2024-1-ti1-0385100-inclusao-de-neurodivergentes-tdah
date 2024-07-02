@@ -23,7 +23,184 @@ label{
     display: block;
     margin-bottom: 8px;
     font-size: 0.8rem;
+}@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
 }
+
+.tela-login{
+    width: 100vw;
+    height: 100vh;
+    background-color: #07041e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+label{
+    color: white;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.8rem;
+}
+
+input{
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px #00000056;
+    background-color: #514869;
+    width: 100%;
+    outline: none;
+    font-size: 12pt;
+    border: none;
+    cursor: auto;
+    color: white;
+}
+input:hover{
+    background-color: #62587e;
+    transition: all .4s ease-out;
+}
+
+.card{
+    background-color: #280a33;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 10px 40px #00000056;
+    width: 80%;
+    max-width: 400px; /* Limita a largura máxima para telas maiores */
+    border: 3px solid white;
+}
+h1{
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.btn-login{
+    background-color: #411252;
+    color: #fff;
+    width: 100%;
+    padding: 15px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 1000;
+    margin-top: 15px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 10px 30px #00000056;
+    cursor: pointer;
+}
+
+.btn-login:hover{
+    background-color: #641d7e;
+    transition: all .4s ease-out;
+}
+
+.textfield{
+    width: 100%;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    .btn-login {
+        font-size: 10px;
+        padding: 12px;
+    }
+
+    input {
+        padding: 12px;
+        font-size: 10pt;
+    }
+
+    .tela-login{
+        width: 100%;
+        height: 100vh;
+        background-color: #07041e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    .btn-login {
+        font-size: 8px;
+        padding: 10px;
+    }
+
+    input {
+        padding: 10px;
+        font-size: 8pt;
+    }
+    .tela-login{
+        width: 100%;
+        height: 100vh;
+        background-color: #07041e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+}
+
+
+#btn-cadastre a{
+
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+
+}
+#btn-cadastre a:hover{
+
+    color: rgb(111, 111, 111);
+
+}
+
 
 input{
     margin-bottom: 15px;
@@ -86,5 +263,6 @@ h1{
 
 .textfield{
     width: 100%;
+    
 }
 
