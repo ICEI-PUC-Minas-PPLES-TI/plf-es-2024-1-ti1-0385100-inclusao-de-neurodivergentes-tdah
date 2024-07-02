@@ -64,6 +64,7 @@ p {
 
 .secao-boas-vindas {
   color: rgb(255, 255, 255);
+  margin-top: 40px;
 }
 
 .cards-container {
@@ -142,7 +143,18 @@ footer {
   min-height: 100vh;
 }
 
+#btn-logout{
+  background-color: #4f0832;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
+#btn-logout:hover{
+  background-color: #522f43;
+}
 button.card {
   background-color: #4f0832;
   color: white;
@@ -190,7 +202,6 @@ button:active {
   position: absolute; 
   top: 100%; 
   left: 0; 
-  background-color: #280a33;
   min-width: 200px;
   border-radius: 4px;
   z-index: 1; 

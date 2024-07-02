@@ -12,12 +12,12 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #280a33;
-   
+    background-color: #07041e;
+
 }
 
 header {
-    background-color: #280a33;
+    background-color: #07041e;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,7 +31,7 @@ header > img {
 }
 
 nav {
-    background-color: #280a33;
+    background-color: #07041e;
 }
 
 
@@ -52,7 +52,7 @@ nav li > a {
 }
 
 footer {
-    background-color: #280a33;
+    background-color: #07041e;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,7 +78,7 @@ footer {
 
 aside.criar-resumo {
     grid-area: aside;
-    background-color: #4f0832;
+    background-color: #280a33;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -86,12 +86,8 @@ aside.criar-resumo {
     padding: 30px;
     border-radius: 6px;
     margin: 0px 0px 10px 55px;
-    -webkit-box-shadow:0px 0px 178px 0px rgba(171,46,255,0.28);
--moz-box-shadow: 0px 0px 178px 0px rgba(171,46,255,0.28);
-box-shadow: 0px 0px 178px 0px rgba(171,46,255,0.28);
-background: rgba(131, 63, 186, 0.13);
-border-radius: 16px;
-border: 1px solid rgba(131, 63, 186, 0.36);
+    box-shadow: 0px 0px 178px 0px rgba(171,46,255,0.18);
+    border: 1px solid rgba(131, 63, 186, 0.36);
 }
 
 .fazer-resumo textarea,input{
@@ -106,15 +102,11 @@ main.fazer-resumo {
     grid-area: main;
     padding: 0;
     margin: 0px auto;
-    background-color: #4f0832;
+    background-color: #280a33;
     width: 90%;
     height: 98.6%;
     box-sizing: border-box;
-    border-radius: 6px;
-    -webkit-box-shadow:0px 0px 178px 0px rgba(171,46,255,0.28);
--moz-box-shadow: 0px 0px 178px 0px rgba(171,46,255,0.28);
-box-shadow: 0px 0px 178px 0px rgba(171,46,255,0.28);
-background: rgba(131, 63, 186, 0.13);
+    box-shadow: 0px 0px 178px 0px rgba(171,46,255,0.18);
 border-radius: 16px;
 border: 1px solid rgba(131, 63, 186, 0.36);
 
@@ -124,22 +116,20 @@ main.visualizacao-resumo {
     grid-area: main;
     padding: 30px;
     margin: 0;
-    background-color: #4f0832;
+    background-color: #280a33;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
     border-radius: 10px;
     font-size: 18px;
-    -webkit-box-shadow:0px 0px 178px 0px rgba(171,46,255,0.28);
+    -webkit-box-shadow:0px 0px 178px 0px rgba(171,46,255,0.18);
 -moz-box-shadow: 0px 0px 178px 0px rgba(171,46,255,0.28);
-box-shadow: 0px 0px 178px 0px rgba(171,46,255,0.28);
-/* From https://css.glass */
-background: rgba(131, 63, 186, 0.13);
+box-shadow: 0px 0px 178px 0px rgba(171,46,255,0.18);
+
 border-radius: 16px;
 border: 1px solid rgba(131, 63, 186, 0.36);
 }
 
-/* CSS para elementos internos do resumo */
 
 .container-criar-resumo {
     display: flex;
@@ -172,13 +162,12 @@ border: 1px solid rgba(131, 63, 186, 0.36);
 
 .bt-criar-resumo,.bt-meus-resumos {
     font-weight: 100;
-    font-size: 14px;
-    color: #000000;
-    background-color: #ffffff;
-    padding: 10px 30px;
-    border: solid #5f00cc 0px;
-    box-shadow: rgb(166, 166, 166) 0px 2px 20px -4px;
-    border-radius: 9px;
+    font-size: 12px;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px #00000056;
+    background-color: #514869;
     transition : 1146ms;
     transform: translateY(0);
     display: flex;
@@ -186,6 +175,7 @@ border: 1px solid rgba(131, 63, 186, 0.36);
     align-items: center;
     cursor: pointer;
     text-transform: uppercase;
+    border: none;
 }
 
 .bt-gerar-resumo:hover{
@@ -200,14 +190,13 @@ border: 1px solid rgba(131, 63, 186, 0.36);
 .bt-criar-resumo:hover,
 .bt-meus-resumos:hover {
     transition : 300ms;
-    padding: 10px 41px;
+    padding: 10px 18px;
     transform : translateY(-0px);
-    background-color: #fff;
-    color: #9c9c9c;
+    background-color: #62587e;
+    color: #c4c4c4;
     border: solid 0px #d674cb66;
 }
 
-/* Estilo para a lista de resumos */
 .lista-meus-resumos h2 {
     color: white;
 }
@@ -218,11 +207,11 @@ border: 1px solid rgba(131, 63, 186, 0.36);
     width: 90%;
     box-sizing: border-box;
     border: solid #db05fc 0px;
-    box-shadow: rgba(235, 63, 251, 0.322) 0px 2px 20px -4px;
+    box-shadow: rgba(235, 63, 251, 0.18) 0px 2px 20px -4px;
     border-radius: 9px;
     transition : 1146ms;
     transform: translateY(0);
-   
+    border: 1px solid rgba(131, 63, 186, 0.36);
 }
 
 .lista-meus-resumos h2 {
@@ -244,15 +233,15 @@ border: 1px solid rgba(131, 63, 186, 0.36);
     display: none;
     grid-area: main;
     padding: 50px;
-    background-color: #ff6f61;
+    background-color: #280a33; 
     text-align: center;
     justify-content: center;
     align-items: center;
     color: white;
     transform: scale(0.8) translateY(-20px);
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-    
-    
+
+
 }
 
 .visualizacao-resumo.show {
@@ -296,7 +285,7 @@ border: 1px solid rgba(131, 63, 186, 0.36);
     margin-bottom: 10px;
     cursor: pointer;
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-    font-size: 18px; /* Aumentar o tamanho do texto */
+    font-size: 18px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -304,6 +293,7 @@ border: 1px solid rgba(131, 63, 186, 0.36);
  background: rgba(246, 244, 247, 0.968);
  border-radius: 16px;
  border: 1px solid rgba(131, 63, 186, 0.36);
+
 }
 
 .lista-meus-resumos ul li:hover {
@@ -317,12 +307,12 @@ border: 1px solid rgba(131, 63, 186, 0.36);
 .lista-meus-resumos .botoes {
     display: flex;
     flex-direction: column;
-    gap: 12px; /* Adicionar espaçamento entre os botões */
+    gap: 12px;
 }
 
 .lista-meus-resumos button {
-    width: fit-content; /* Ocupar toda a largura */
-    padding: 6px 8px; /* Ajustar o tamanho dos botões */
+    width: fit-content;
+    padding: 6px 8px;
     border: none;
     border-radius: 8px;
     background-color: #702eb7;
@@ -334,10 +324,10 @@ border: 1px solid rgba(131, 63, 186, 0.36);
 .lista-meus-resumos button:hover {
     background-color: #a95ec9;
     transform: scale(1.1);
-   
+
 }
 
-/* Responsividade */
+
 @media (max-width: 767px) {
     .container-principal {
         grid-template-areas:
@@ -369,9 +359,9 @@ border: 1px solid rgba(131, 63, 186, 0.36);
         margin-top: 10px;
     }
 
-    
-        
-    
+
+
+
 }
 
 
@@ -379,10 +369,9 @@ border: 1px solid rgba(131, 63, 186, 0.36);
     text-align: center;
 }
 
-/* Estilo para a seção de criação de resumo */
 
 .fazer-resumo {
-    display: none; /* Estado inicial oculto */
+    display: none;
     transition: opacity 0.5s ease;
     grid-template-columns: 1fr;
     gap: 20px;
@@ -393,7 +382,7 @@ border: 1px solid rgba(131, 63, 186, 0.36);
 }
 
 .fazer-resumo.show {
-    display: grid; /* Ou o display que você preferir */
+    display: grid; 
     opacity: 1;
 }
 

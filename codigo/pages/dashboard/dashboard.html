@@ -6,24 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MindStorm</title>
   <link rel="stylesheet" href="dashboardcss.css">
-  <script>
-    function logout() {
-            fetch('/logout', {
-                method: 'POST', // ou 'GET' dependendo da sua implementação do backend
-                credentials: 'include' // para enviar cookies de autenticação, se houver
-            })
-            .then(response => {
-                if (response.ok) {
-                    window.location.href = 'login.html'; // redirecionar para a página de login
-                } else {
-                    alert('Falha ao deslogar.');
-                }
-            })
-            .catch(error => {
-                console.error('Erro ao deslogar:', error);
-            });
-        }
-  </script>
   
 </head>
 
@@ -42,11 +24,12 @@
         <div class="dropdown">
         <img src="setting icone.png" alt="setting" width="30px">
         <div class="dropdown-child">
-          <a href="#" onclick="logout()">Sair</a>
+          <button id="btn-logout" onclick="logout()">Sair</button>
       </div>
       </div>
         <section class="secao-boas-vindas">
-          <h1>Bem vindo! </h1>
+          <h1>Bem vindo!</h1>
+          <h3>Este é o seu painel de controle.</h2>
           <h2>
             <p>Dashboard</p>
           </h2>

@@ -1,6 +1,6 @@
-const API_KEY = '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';
 
-async function getCompletion(prompt){
+
+async function getCompletion(prompt) {
     try {
         const response = await fetch('https://api.openai.com/v1/completions', {
             method: 'POST',
@@ -24,33 +24,37 @@ async function getCompletion(prompt){
         return await response.json();
     } catch (error) {
         console.error('Failed to fetch: ', error);
+        return null;
     }
 }
 
-document.querySelector('.gerar-resumo').addEventListener('click', async () => {
-    const tituloInput = document.querySelector('.insira-titulo');
-    const resumoTextarea = document.querySelector('.insira-resumo');
-
-    if (!tituloInput.value.trim()) {
-        alert('Insira o Tema');
-        return;
-    }
-
-    const response = await getCompletion(tituloInput.value);
-    if (response && response.choices && response.choices.length > 0) {
-        resumoTextarea.value = response.choices[0].text;
-    } else {
-        resumoTextarea.value = 'Não foi possível gerar o texto.';
-    }
-
+function setupEventListeners() {
+    const gerarBtn = document.querySelector('.gerar-resumo');
     const salvarBtn = document.querySelector('.salvar-resumo');
-    salvarBtn.style.display = 'inline';
-});
 
-document.addEventListener('DOMContentLoaded', () => {
-    const salvarBtn = document.querySelector('.salvar-resumo');
-    salvarBtn.addEventListener('click', salvarResumoHandler);
-});
+    gerarBtn.addEventListener('click', async () => {
+        const tituloInput = document.querySelector('.insira-titulo');
+        const resumoTextarea = document.querySelector('.insira-resumo');
+
+        if (!tituloInput.value.trim()) {
+            alert('Insira o Tema');
+            return;
+        }
+
+        resumoTextarea.value = 'Gerando resumo, por favor aguarde...';
+
+        const response = await getCompletion(tituloInput.value);
+        if (response && response.choices && response.choices.length > 0) {
+            resumoTextarea.value = response.choices[0].text;
+        } else {
+            resumoTextarea.value = 'Não foi possível gerar o texto.';
+        }
+
+        salvarBtn.style.display = 'inline';
+    });
+
+    salvarBtn.addEventListener('click', salvarResumoHandler, { once: true });
+}
 
 function salvarResumoHandler() {
     const tituloInput = document.querySelector('.insira-titulo');
@@ -58,4 +62,18 @@ function salvarResumoHandler() {
     salvarResumoGerado(tituloInput.value, resumoTextarea.value);
 }
 
-console.log(getCompletion(''));
+function salvarResumoGerado(titulo, conteudo) {
+    const novoResumo = {
+        titulo: titulo,
+        resumo: conteudo
+    };
+
+    let resumos = JSON.parse(localStorage.getItem('resumos')) || [];
+    resumos.push(novoResumo);
+    localStorage.setItem('resumos', JSON.stringify(resumos));
+
+    alert('Resumo salvo com sucesso!');
+    exibirTitulosResumos();
+}
+
+document.addEventListener('DOMContentLoaded', setupEventListeners);

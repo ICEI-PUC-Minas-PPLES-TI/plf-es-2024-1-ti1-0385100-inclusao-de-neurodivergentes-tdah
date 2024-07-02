@@ -1,6 +1,6 @@
 function toggleResumo() {
     var fazerResumoDiv = document.getElementById('fazer-resumo');
-    
+
     if (fazerResumoDiv.classList.contains('show')) {
         fazerResumoDiv.classList.add('hide');
         setTimeout(function() {
@@ -16,6 +16,8 @@ function toggleResumo() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
+    const salvarBtn = document.querySelector('.salvar-resumo');
+    salvarBtn.addEventListener('click', salvarNovoResumo, { once: true });
 });
 
 function alternarExibicaoLista() {
@@ -35,7 +37,6 @@ function alternarExibicaoLista() {
 document.querySelector('#meus-resumos').addEventListener('click', alternarExibicaoLista);
 
 function exibirTitulosResumos() {
-
     const listaTitulos = document.querySelector('#lista-titulos');
     listaTitulos.innerHTML = '';
 
@@ -85,26 +86,24 @@ function excluirResumo(titulo) {
     }
 }
 
-
 function editarResumo(titulo) {
     esconderTodosFormularios();
+    const salvarBtn = document.querySelector('.salvar-resumo');
+    salvarBtn.removeEventListener('click', salvarNovoResumo);
     if (confirm(`Deseja editar o resumo "${titulo}"?`)) {
         const resumos = JSON.parse(localStorage.getItem('resumos')) || [];
         const resumo = resumos.find(r => r.titulo === titulo);
         if (resumo) {
-            
             document.querySelector('.insira-titulo').value = resumo.titulo;
             document.querySelector('.insira-resumo').value = resumo.resumo;
 
             toggleResumo();
 
-            const salvarBtn = document.querySelector('.salvar-resumo');
             salvarBtn.style.display = 'inline';
             salvarBtn.textContent = 'SALVAR ALTERAÇÕES';
-            salvarBtn.removeEventListener('click', salvarResumoHandler);
             salvarBtn.addEventListener('click', () => {
                 salvarEdicoesResumo(titulo); 
-            });
+            }, { once: true });
         }
     }
 }
@@ -124,24 +123,21 @@ function salvarEdicoesResumo(tituloOriginal) {
     }
 }
 
-
 function exibirFormularioCriacao() {
     esconderTodosFormularios();
 
     document.querySelector('.insira-titulo').value = '';
     document.querySelector('.insira-resumo').value = '';
 
-
-    document.querySelector('.salvar-resumo').textContent = 'SALVAR';
-
-   
-    document.querySelector('.salvar-resumo').onclick = salvarNovoResumo;
+    const salvarBtn = document.querySelector('.salvar-resumo');
+    salvarBtn.textContent = 'SALVAR';
+    salvarBtn.removeEventListener('click', salvarEdicoesResumo);
+    salvarBtn.addEventListener('click', salvarNovoResumo, { once: true });
 
     if (!document.getElementById('fazer-resumo').classList.contains('show')) {
         toggleResumo();
     }
 }
-
 
 function salvarNovoResumo() {
     const titulo = document.querySelector('.insira-titulo').value;
@@ -158,16 +154,13 @@ function salvarNovoResumo() {
         localStorage.setItem('resumos', JSON.stringify(resumos));
 
         alert('Resumo salvo com sucesso!');
-
         exibirTitulosResumos(); 
     } else {
         alert('Por favor, preencha o título e o resumo antes de salvar.');
     }
 }
 
-
 document.querySelector('.bt-criar-resumo').addEventListener('click', exibirFormularioCriacao);
-
 
 function visualizarResumo(titulo) {
     esconderTodosFormularios();
@@ -182,7 +175,6 @@ function visualizarResumo(titulo) {
         `;
         visualizacaoResumoDiv.style.display = 'block';
 
-       
         document.getElementById('fechar-visualizacao').addEventListener('click', () => {
             visualizacaoResumoDiv.style.display = 'none';
         });
@@ -190,7 +182,6 @@ function visualizarResumo(titulo) {
         alert('Resumo não encontrado.');
     }
 }
-
 
 function esconderTodosFormularios() {
     const fazerResumoDiv = document.getElementById('fazer-resumo');
@@ -203,9 +194,7 @@ function esconderTodosFormularios() {
     visualizacaoResumoDiv.style.display = 'none';
 }
 
-
 window.onload = exibirTitulosResumos;
-
 
 function salvarResumoGerado(titulo, conteudo) {
     const novoResumo = {
@@ -221,7 +210,6 @@ function salvarResumoGerado(titulo, conteudo) {
     exibirTitulosResumos(); 
 }
 
-
 document.getElementById('bt-gerar-resumo').addEventListener('click', () => {
     esconderTodosFormularios();
     toggleResumo(); 
@@ -229,14 +217,12 @@ document.getElementById('bt-gerar-resumo').addEventListener('click', () => {
     const tituloInput = document.querySelector('.insira-titulo');
     const resumoTextarea = document.querySelector('.insira-resumo');
 
-    
     resumoTextarea.value = '';
     tituloInput.value = ''; 
     tituloInput.placeholder = 'Insira o Tema'; 
 
     document.querySelector('.salvar-resumo').style.display = 'none';
 });
-
 
 document.querySelector('.gerar-resumo').addEventListener('click', async () => {
     const tituloInput = document.querySelector('.insira-titulo');
@@ -247,16 +233,15 @@ document.querySelector('.gerar-resumo').addEventListener('click', async () => {
         return;
     }
 
+    resumoTextarea.value = 'Gerando resumo, por favor aguarde...';
+
     const response = await getCompletion(tituloInput.value);
     resumoTextarea.value = response.choices[0].text; 
 
     const salvarBtn = document.querySelector('.salvar-resumo');
     salvarBtn.style.display = 'inline';
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    const salvarBtn = document.querySelector('.salvar-resumo');
-    salvarBtn.addEventListener('click', salvarResumoHandler);
+    salvarBtn.removeEventListener('click', salvarNovoResumo);
+    salvarBtn.addEventListener('click', salvarResumoHandler, { once: true });
 });
 
 function salvarResumoHandler() {
@@ -267,21 +252,16 @@ function salvarResumoHandler() {
 
 function mostrarCarregando() {
     var textarea = document.getElementById('resumo-textarea');
-    var originalText = textarea.value; 
     textarea.placeholder = ''; 
     textarea.value = 'Gerando resumo, por favor aguarde...'; 
-
-   
-    setTimeout(() => {
-        textarea.value = originalText; 
-        textarea.placeholder = 'Insira o Resumo'; 
-    }, 3000); 
 }
 
 function setupEventListeners() {
     var gerarButton = document.querySelector('.gerar-resumo');
+    
     gerarButton.removeEventListener('click', mostrarCarregando);
+
     gerarButton.addEventListener('click', mostrarCarregando);
 }
 
-setupEventListeners();
+document.addEventListener('DOMContentLoaded', setupEventListeners);
