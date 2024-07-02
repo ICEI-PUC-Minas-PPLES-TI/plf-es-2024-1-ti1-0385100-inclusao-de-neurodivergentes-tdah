@@ -8,6 +8,7 @@ Uma forma de ajudar a todas a atingir seu máximo potencial, com recursos que s�
 * Arlindo Sergio
 * Arthur Pazzutti
 * Joaquim Guilherme
+* Vinícius Senna
 
 ## Professores responsáveis
 
