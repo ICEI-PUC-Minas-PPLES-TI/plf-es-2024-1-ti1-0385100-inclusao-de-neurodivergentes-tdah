@@ -15,16 +15,16 @@ A documentação do projeto inclui as seguintes seções:
 
 ## Problema
 
-Hodiernamente, é comum saber de alguem que não consegue se concentrar em tarefas e estudos, ainda mais pessoas neurodivergentes, tendo isso em vista, se faz necessário ferramentas que possam destravar e ajudar essas pessoas, para que possam ter um maior controle de suas atividades e um maior desempenho, tanto na vida como acadêmico.
+Hodiernamente, é comum saber de alguem que não consegue se concentrar em tarefas e estudos, ainda mais pessoas neurodivergentes, tendo isso em vista, se faz necessário ferramentas que possam destravar e ajudar essas pessoas, para que possam ter um maior controle de suas atividades e um maior desempenho, tanto na vida como acadêmicamente.
 
 ## Objetivos
 
-Objetivo geral:
--Desenvolver um software para auxiliar essas pessoas, principalmente estudantes, para que possam se organizar e alcançar um maior desenvolvimento.
+Objetivo geral: 
+Desenvolver um software para auxiliar essas pessoas, principalmente estudantes, para que possam se organizar e alcançar um maior desenvolvimento.
 
 ## Justificativa
 
-Priorizamos a inclusão de pessoas com neurodivergências em nossa plataforma educacional, adaptando-a para atender às suas necessidades específicas. Desenvolvemos funcionalidades internas que simplificam a organização e maximizam o foco no estudo. Nossa meta é criar um ambiente de aprendizado acolhedor e eficaz, capacitando esses usuários a alcançarem um maior desempenho, tanto no cotidiano como na vida acad.
+Priorizamos a inclusão de pessoas com neurodivergências em nossa plataforma educacional, adaptando-a para atender às suas necessidades específicas. Desenvolvemos funcionalidades internas que simplificam a organização e maximizam o foco no estudo. Nossa meta é criar um ambiente de aprendizado acolhedor e eficaz, capacitando esses usuários a alcançarem um maior desempenho, tanto no cotidiano como na vida académica.
 
 ## Público-Alvo
 
