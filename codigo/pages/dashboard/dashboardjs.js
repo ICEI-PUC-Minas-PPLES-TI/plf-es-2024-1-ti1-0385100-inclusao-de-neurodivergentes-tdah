@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function() {
     // Código para a página de login
     if (document.getElementById('loginForm')) {
         document.getElementById('loginForm').addEventListener('submit', function(event) {

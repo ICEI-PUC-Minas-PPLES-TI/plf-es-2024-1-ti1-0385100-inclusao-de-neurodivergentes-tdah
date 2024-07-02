@@ -31,6 +31,7 @@ header img {
     /* Ajuste conforme o tamanho da sua logo */
     height: auto;
     /* Para manter a proporção */
+    display: flex;
 }
 
 nav {

@@ -27,7 +27,6 @@ header > img {
   justify-content: start;
 }
 
-
 nav {
   grid-area: nav;
   background-color: #07041e;

@@ -68,6 +68,26 @@
   </div>
   
 </body>
+<script>
+  async function logout(){
+      await fetch('/logout', {
+          method: 'POST'
+      })
+      .then((res) => res.json())
+      .then((data) => {
+          if (data.success) {
+              alert('Logout feito com sucesso');
+              if (data.removeLocalStorageKey) {
+                localStorage.removeItem(data.removeLocalStorageKey);
+              }
+          } else {
+              console.error('Erro ao deslogar:', data.message);
+          }
+      })
+      .catch(err => console.log(err))
+      window.location.href = '../cadastro/login.html';
+  }
+</script>
 <script src="dashboardjs.js"></script>
 
 </html>
