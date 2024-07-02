@@ -1,4 +1,4 @@
-
+const API_KEY = '';
 
 async function getCompletion(prompt) {
     try {

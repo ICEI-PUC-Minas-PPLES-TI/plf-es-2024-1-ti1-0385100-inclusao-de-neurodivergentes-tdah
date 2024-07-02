@@ -17,11 +17,11 @@ body {
 
 header {
     background-color: #07041e;
-    justify-content: space-between;
     align-items: center;
     padding: 10px 60px;
     /* Adicionado para espaçamento interno */
     display: flex;
+    justify-content: space-between;
 }
 
 
@@ -38,7 +38,6 @@ nav {
     color: white;
     flex: 1;
     /* Ocupa o espaço restante */
-
     text-align: center;
 }
 
