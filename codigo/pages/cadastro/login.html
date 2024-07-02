@@ -41,7 +41,7 @@
         event.preventDefault();
 
         const email = document.getElementById('login-email').value.trim();
-        const senha = document.getElementById('login-senha').value.trim();
+        const senha = document.getElementById('password').value.trim();
 
         // Verifica se os campos não estão vazios
         if (email === "" || senha === "") {
@@ -50,7 +50,7 @@
         }
 
         // Busca os dados dos clientes cadastrados
-        fetch('http://localhost:3000/clientes')
+        fetch('/api/clientes')
             .then(response => response.json())
             .then(clientes => {
                 const clienteEncontrado = clientes.find(cliente => cliente.email === email && cliente.senha === senha);

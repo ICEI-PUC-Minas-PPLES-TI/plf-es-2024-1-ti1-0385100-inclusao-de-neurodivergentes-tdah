@@ -71,21 +71,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 300);
     }
 });
-
-const express = require('express');
-const app = express();
-
-app.post('/logout', (req, res) => {
-    // Exemplo para destruir a sessão
-    req.session.destroy(err => {
-        if (err) {
-            return res.status(500).send('Erro ao deslogar');
-        }
-        res.clearCookie('connect.sid'); // ou qualquer outro cookie de sessão que esteja usando
-        res.status(200).send('Logout bem-sucedido');
-    });
-});
-
-app.listen(3000, () => {
-    console.log('Servidor rodando na porta 3000');
-});

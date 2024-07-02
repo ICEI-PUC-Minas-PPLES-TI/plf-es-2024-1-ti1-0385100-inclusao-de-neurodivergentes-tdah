@@ -2,9 +2,9 @@
   "name": "lab-jsonserver",
   "version": "1.0.0",
   "description": "Laboratório de aplicação Web com backend baseado no JSON Server",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "npx json-server --watch pages/cadastro/db.json --static pages/ --port 3000"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "Rommel Vieira Carneiro",
