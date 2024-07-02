@@ -209,7 +209,7 @@ img {
   
 }
 
-@media (max-width: 420px) {
+@media (max-width: 1200px) {
   .cards-container {
     display: flex;
     gap: 20px;

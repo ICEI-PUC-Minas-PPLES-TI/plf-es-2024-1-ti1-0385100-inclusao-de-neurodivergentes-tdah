@@ -1,10 +1,11 @@
 run = "cd codigo && npm install && npm start"
+modules = ["web", "nodejs-20", "nix"]
 
 [nix]
 channel = "stable-23_11"
 
 [deployment] 
-run = ["sh", "-c", "npm start"]
+run = ["sh", "-c", "cd codigo && npm install && npm start"]
 
 [[ports]]
 localPort = 3000
