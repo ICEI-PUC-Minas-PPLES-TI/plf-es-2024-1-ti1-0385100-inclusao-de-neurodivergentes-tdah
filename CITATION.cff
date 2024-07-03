@@ -2,30 +2,30 @@ cff-version: 1.0.1
 message: Please cite this software using these metadata.
 title: 
 authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
+  - family-names: Pereira Junior
+    given-names: Arlindo Sergio
+  - family-names: de Carvalho Vilela Silva
+    given-names: Joaquim Guilherme
+  - family-names: Pimenta de Figueiredo
+    given-names: Vinicius Gabriel Sena
+  - family-names: Pazzutti da Silva
+    given-names: Arthur Bernardo 
+  - family-names: Batista Siqueira
+    given-names: Gabriel Lima
   - family-names: 
     given-names:
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Carneiro
+    given-names: Rommel Vieira
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Nogueira
+    given-names: Simone Alves 
 keywords:
-  - 
-  - 
-repository-code: 
+  - TDAH
+  - Neurodivergencia
+repository-code: https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385100-inclusao-de-neurodivergentes-tdah.git
 license: CC-BY-4.0
 version: 1.0.0
 date-released: 2022-07-14
