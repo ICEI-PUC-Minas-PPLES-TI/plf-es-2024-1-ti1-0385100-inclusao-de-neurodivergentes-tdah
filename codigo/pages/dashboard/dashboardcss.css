@@ -222,6 +222,17 @@ img {
   
 }
 
+.destaque{
+  display: flex;
+  justify-content: center;
+}
+
+.footer{
+  width: 100%;
+}
+
+
+
 @media (max-width: 1200px) {
   .cards-container {
     display: flex;
