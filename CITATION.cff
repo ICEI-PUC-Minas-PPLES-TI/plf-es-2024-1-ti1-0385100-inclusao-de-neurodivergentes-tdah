@@ -1,6 +1,6 @@
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title: 
+title: MindStorm
 authors:
   - family-names: Pereira Junior
     given-names: Arlindo Sergio
@@ -12,8 +12,6 @@ authors:
     given-names: Arthur Bernardo 
   - family-names: Batista Siqueira
     given-names: Gabriel Lima
-  - family-names: 
-    given-names:
   - name-suffix: Professor
     affiliation: PUC Minas
     family-names: Carneiro
